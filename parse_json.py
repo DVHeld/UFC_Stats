@@ -26,7 +26,6 @@ def parse_fighters() -> bool:
             output_file.readline()
             fighter = output_file.readline()
             while fighter:
-                print(fighter)
                 to_skip.append(fighter.split(";")[1])
                 fighter = output_file.readline()
 
