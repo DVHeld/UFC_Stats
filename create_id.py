@@ -23,9 +23,10 @@ def create_fight_id() -> bool:
             column_headers = "fight_id;fight_alternate_id"
             for header_name in next(downloaded_data):
                 #Exclude fighter details
-                if header_name not in ["RedFighter", "BlueFighter", "RedStance",\
-                                       "BlueStance", "RedHeightCms", "BlueHeightCms",\
-                                       "RedReachCms", "BlueReachCms"]:
+                if header_name in ["BlueFighter", "RedFighter"]:
+                    header_name += "ID"
+                if header_name not in ["RedStance", "BlueStance", "RedHeightCms",\
+                                       "BlueHeightCms", "RedReachCms", "BlueReachCms"]:
                     column_headers += ";" + header_name
             output_file.write(column_headers + "\n")
 
@@ -36,8 +37,11 @@ def create_fight_id() -> bool:
                          _remove_accents(row[0]).lower().replace(" ", "_") + "-" +\
                          _remove_accents(row[1]).lower().replace(" ", "_")
                 for stat_no, stat in enumerate(row):
-                    if stat_no not in [0, 1, 33, 34, 35, 56, 57, 58]:
-                        record += ";" + _remove_accents(stat).replace(".", ",")
+                    if stat_no not in [33, 34, 35, 56, 57, 58]:
+                        if stat_no in [0, 1]:
+                            record += ";" + _remove_accents(stat).lower().replace(" ", "-")
+                        else:
+                            record += ";" + _remove_accents(stat).replace(".", ",")
                 output_file.write(record + "\n")
                 fight_id += 1
     return True
