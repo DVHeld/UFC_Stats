@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HTTP Connection Manager"
+  DTS:DTSID="{56F5CDC7-4666-466A-98E0-6A41EF2CDA13}"
+  DTS:CreationName="HTTP">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="https://github.com/shortlikeafox/ultimate_ufc_dataset/raw/refs/heads/main/ufc-master.csv">
+      <DTS:HttpConnection
+        DTS:ServerURL="https://github.com/shortlikeafox/ultimate_ufc_dataset/raw/refs/heads/main/ufc-master.csv">
+        <DTS:Property
+          DTS:Name="ServerPassword"
+          Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAO5mAGb+yU6X2osQ7aRtkAAAAAACAAAAAAAQZgAAAAEAACAAAADIJVdhtDDmsq+Q81x5Y7w72DhQzA7lK3q8Cz0UoRtH9wAAAAAOgAAAAAIAACAAAACJNEt2yf0PlL49CuOcWtB2vdSGhnfxjs4aUM09UuYA5IAAAACfd790llQ5w7Z7stDvBGVLpoy4HJ/j/2+07JHduBmVcywYdG4h1Np9SluIyTnJcsgzma2mM+dbCc2pLcuG4m90Lhhif1sAG4bLTxb6xnWMLrjEkoHwAE5E6oTUPk1mAOeR8ykoudHvNHvWxh6ZbZiSo/eQU2Yc8F2ZvgMLgY8MH0AAAABD23T0W3hGG/VI3lTLO3gmp/PsDyy25YVMM3bcgHWuxjcn0gn3uHxkQDDraLZu00WjVrn5EfgKjx7bc2K0d6Nw</DTS:Property>
+        <DTS:Property
+          DTS:Name="ProxyPassword"
+          Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAO5mAGb+yU6X2osQ7aRtkAAAAAACAAAAAAAQZgAAAAEAACAAAABFPmYmwxlDuxmfKARH/wndOxwKntCjN7FME1vV0RMPtwAAAAAOgAAAAAIAACAAAADajuNXkb2EEFaKvUty0TMqS4ZOPvx2tcJUPJSTj2xC2IAAAAATa45Ap5yFogOk0LZ+MTZGfUdPHLPadqll7/d08ck3OsqLEDW+uPP0IU9y/t/G1JDqYTWAbKf65qCOitPz9hHhDbbhhFijkfOHqpbqzuvac9jOXlebkmXszssfDlQFb+Oz0RuF79cx4GNNbS1x6QeYxp7pg3Yk9aAvfGY2fxOsKkAAAAB7pR8JJK2x/LPrO+Y0LdFyY8Wmtl55BG2sp7B9I8nv8DYTi7ipdj0teFTzodiX1AXwFUAgEJ1vaqsWDvg86Tq/</DTS:Property>
+      </DTS:HttpConnection>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

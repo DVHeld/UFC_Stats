@@ -1,0 +1,943 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ufc-master_processed_csv"
+  DTS:DTSID="{D9A41D30-0B59-44F0-856D-8C160D6C3B3C}"
+  DTS:CreationName="FLATFILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="1033"
+      DTS:HeaderRowDelimiter="_x000D__x000A_"
+      DTS:ColumnNamesInFirstDataRow="True"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x003C_none_x003E_"
+      DTS:CodePage="1252"
+      DTS:ConnectionString="D:\Repos\UFC_Stats\data\ufc-master_processed.csv">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="2"
+          DTS:TextQualified="True"
+          DTS:ObjectName="fight_id"
+          DTS:DTSID="{87A5B974-B36B-44E2-AB76-6B2C2F61A90A}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="fight_alternate_id"
+          DTS:DTSID="{7E2F3CD6-9F50-424C-84CE-B1F9567F61E0}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedFighterID"
+          DTS:DTSID="{B95BBCE1-166E-47CA-A4A5-9AEEF5266A6B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueFighterID"
+          DTS:DTSID="{DF021E07-B5B0-4726-8562-4A94243D5382}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedOdds"
+          DTS:DTSID="{4F37E2CA-E651-438C-80AF-F9BC1E405BA9}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueOdds"
+          DTS:DTSID="{FF5FE7E3-4292-4321-86E9-1CC763AC10F4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedExpectedValue"
+          DTS:DTSID="{C66322AF-6F97-4AF3-985C-62A4C77D4C30}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueExpectedValue"
+          DTS:DTSID="{3BB12F6A-3F49-42DC-A82E-CADA7C0C4207}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="7"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Date"
+          DTS:DTSID="{56DC5C75-F552-4ED5-928F-416C49073077}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Location"
+          DTS:DTSID="{D350D574-CC7D-460E-80C9-5330290E5C6D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="200"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Country"
+          DTS:DTSID="{2295966F-A3A4-4C4D-BE55-C7A9A8EE55BB}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Winner"
+          DTS:DTSID="{DC0DE775-35D5-44C2-A288-3F6C4F09F5A7}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="11"
+          DTS:TextQualified="True"
+          DTS:ObjectName="TitleBout"
+          DTS:DTSID="{11FFBDDF-C49C-4612-A5E7-AB7E2AE6E708}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="WeightClass"
+          DTS:DTSID="{6BDEB202-8415-4C1D-AE72-66C39EEBAD15}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Gender"
+          DTS:DTSID="{6ACCB181-19B7-4A21-AD04-4593E575EA24}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="NumberOfRounds"
+          DTS:DTSID="{530D8A69-8271-4138-AD19-88586A98501D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueCurrentLoseStreak"
+          DTS:DTSID="{E00D9E4A-B9CC-4E4D-908C-2AE75152544D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueCurrentWinStreak"
+          DTS:DTSID="{025376CC-F4B9-4262-8A78-C62CE4AB5ECD}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueDraws"
+          DTS:DTSID="{9181626E-D610-4679-99D3-0744CD9D3C69}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueAvgSigStrLanded"
+          DTS:DTSID="{AE99F367-1045-4C02-8CE1-281B8FB90950}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueAvgSigStrPct"
+          DTS:DTSID="{37942D1B-AEAA-4A35-BF27-4FC2F3B02581}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueAvgSubAtt"
+          DTS:DTSID="{F9414168-DCA4-40B6-B1B9-1B95F896C9E9}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueAvgTDLanded"
+          DTS:DTSID="{1FB079B4-2807-46A0-90E1-4FD6E5E27695}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueAvgTDPct"
+          DTS:DTSID="{7E964F51-EC4A-4AE7-9C12-E967504F0649}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueLongestWinStreak"
+          DTS:DTSID="{9DA254BC-9982-49CC-9D7B-8D15599C7CA4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueLosses"
+          DTS:DTSID="{0874490E-B03B-4FFE-90B2-DE422DF4900A}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueTotalRoundsFought"
+          DTS:DTSID="{05281B4A-0641-45A7-BFEE-1FB71C54A89C}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueTotalTitleBouts"
+          DTS:DTSID="{C2B9C6E6-3F38-427F-9D29-B06724E02BBE}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWinsByDecisionMajority"
+          DTS:DTSID="{1D1BBD16-FFB1-4C5B-BFFB-A899A4D3869D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWinsByDecisionSplit"
+          DTS:DTSID="{E1408805-CA40-4DBD-BE19-03B554D57ACD}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWinsByDecisionUnanimous"
+          DTS:DTSID="{FBD5C844-1421-4C00-9C54-82200A87CAE3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWinsByKO"
+          DTS:DTSID="{CD0FC165-3796-4E7A-8B2E-C900304F45A5}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWinsBySubmission"
+          DTS:DTSID="{93AF790C-6DB6-4502-AD90-67E10DC48DE6}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWinsByTKODoctorStoppage"
+          DTS:DTSID="{0E751CC6-C104-4A25-AAAF-605FE7396F4C}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWins"
+          DTS:DTSID="{44EF0B87-F27C-46B4-9F33-E57D7F2652D7}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="2"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueWeightLbs"
+          DTS:DTSID="{D0785960-369B-4572-A565-1EF035CA76E4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedCurrentLoseStreak"
+          DTS:DTSID="{FA8F444A-FD7D-4034-A498-B0FDBF401DF1}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedCurrentWinStreak"
+          DTS:DTSID="{54473918-C0E9-49B9-AC2D-763BCDBD2924}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedDraws"
+          DTS:DTSID="{C0DCEB93-D21A-43BC-8BA3-9A8E4A1213D3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedAvgSigStrLanded"
+          DTS:DTSID="{99A54F02-3538-47D0-B631-4288A3A1FC99}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedAvgSigStrPct"
+          DTS:DTSID="{02218885-5BA0-46BC-8362-C62B8AEE05AB}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedAvgSubAtt"
+          DTS:DTSID="{60C09F80-5C79-470B-AB41-0524D39ED616}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedAvgTDLanded"
+          DTS:DTSID="{6257A309-A855-49A4-AEFB-8064E113C5AE}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedAvgTDPct"
+          DTS:DTSID="{99A7EA13-C262-46BC-A412-8968C9AE613D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedLongestWinStreak"
+          DTS:DTSID="{815E10F9-2EB4-43EA-8345-636C21DA0E3E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedLosses"
+          DTS:DTSID="{E130320A-5DF5-4C3D-BDB2-7CDE1D3DC45E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="2"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedTotalRoundsFought"
+          DTS:DTSID="{1C214F5F-1B82-4317-B479-BFC075CC9FA8}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedTotalTitleBouts"
+          DTS:DTSID="{428BCDBA-D132-42C1-8C6B-953F3D47F629}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWinsByDecisionMajority"
+          DTS:DTSID="{084A8972-B12E-4E99-B713-C1E5A9ABBC87}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWinsByDecisionSplit"
+          DTS:DTSID="{5BE7A217-EEED-4FEA-9A38-1A8DA98F122B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWinsByDecisionUnanimous"
+          DTS:DTSID="{C18E4BB6-EAA1-4C60-A367-84CFF2682F16}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWinsByKO"
+          DTS:DTSID="{3C60F9E0-6E91-4BDA-B8B9-1AF3DAFBE65E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWinsBySubmission"
+          DTS:DTSID="{E602875C-B325-4D66-84C9-FE3E2046E809}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWinsByTKODoctorStoppage"
+          DTS:DTSID="{FD4183BE-D2EE-41B5-86C7-6B7F77C68B11}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWins"
+          DTS:DTSID="{79246A0C-6728-49BB-8276-D1FDB2F02C46}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="2"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedWeightLbs"
+          DTS:DTSID="{E66E22D9-8958-4FC5-A7AF-7C32DA0A8C23}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedAge"
+          DTS:DTSID="{50710DB8-90B9-4669-A7D7-5DE4E38EFBC5}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueAge"
+          DTS:DTSID="{55AE8D30-F3FC-4E66-AFE2-BA10DBE53277}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="LoseStreakDif"
+          DTS:DTSID="{9677D62E-7751-4629-B040-3E38973B40A3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="WinStreakDif"
+          DTS:DTSID="{EB4DFBD4-CB6A-497D-9174-E672625BA27E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="LongestWinStreakDif"
+          DTS:DTSID="{D66EB088-1769-4FA8-8236-CF699788D7A1}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="WinDif"
+          DTS:DTSID="{F8882EDB-7D9E-4D36-95AE-70E514C69759}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="LossDif"
+          DTS:DTSID="{9DC833E7-4249-4F71-AA6E-29232074792B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="2"
+          DTS:TextQualified="True"
+          DTS:ObjectName="TotalRoundDif"
+          DTS:DTSID="{AF00ABB3-5733-4ACB-8D2D-1C908D0388BA}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="TotalTitleBoutDif"
+          DTS:DTSID="{792AA303-193F-4D5E-8E0C-07471497D666}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="KODif"
+          DTS:DTSID="{FE532C8A-4E62-4594-AFD8-D4FDD608B1B7}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="SubDif"
+          DTS:DTSID="{479BBB1D-3590-493F-B488-FE0685A126EB}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="HeightDif"
+          DTS:DTSID="{319AF7DF-3DE1-4344-92BB-BE42A5B19B75}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="ReachDif"
+          DTS:DTSID="{7FA99C8C-3C51-4518-A116-F240A9DF859F}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="16"
+          DTS:TextQualified="True"
+          DTS:ObjectName="AgeDif"
+          DTS:DTSID="{E8EECC07-2F25-4329-BBF1-E8BACC6749FE}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="SigStrDif"
+          DTS:DTSID="{91AEBE9E-D803-4A7E-9AA7-50738035A92B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="AvgSubAttDif"
+          DTS:DTSID="{3A086001-2BA0-423C-ACD6-B4EF89451E40}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="AvgTDDif"
+          DTS:DTSID="{EE832E8A-701F-44A4-BB90-C316CC5012E6}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="EmptyArena"
+          DTS:DTSID="{94B139FA-6BE3-4F64-BBEC-467ED79ADC66}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BMatchWCRank"
+          DTS:DTSID="{344AC426-34FF-4A9F-B185-47316FD51EA3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RMatchWCRank"
+          DTS:DTSID="{8A3892AB-33D4-4C45-830B-8C856C3D36F6}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RWFlyweightRank"
+          DTS:DTSID="{F5DB0D3F-1698-4A4A-96C1-CB9B52D52E9D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RWFeatherweightRank"
+          DTS:DTSID="{9BFEEA22-376E-4703-954D-F4B38D599CDF}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RWStrawweightRank"
+          DTS:DTSID="{3423CEE8-4B5A-47DC-A422-77BFBC044069}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RWBantamweightRank"
+          DTS:DTSID="{0363ECE9-FB6F-4DD4-A5DE-8ABD31D9AFED}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RHeavyweightRank"
+          DTS:DTSID="{8EC4375B-D256-4DE0-908B-0630BEEEB978}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RLightHeavyweightRank"
+          DTS:DTSID="{E51E1EA5-FC3C-46B4-9803-92EC8A931BD3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RMiddleweightRank"
+          DTS:DTSID="{9B43ED60-8B7F-4E96-BB10-A5F9D5A94A8C}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RWelterweightRank"
+          DTS:DTSID="{0D82C1BB-AC5D-442C-8EFC-0374DE39AFC0}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RLightweightRank"
+          DTS:DTSID="{F29CE0A7-9024-4E6C-828E-54B808E14145}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RFeatherweightRank"
+          DTS:DTSID="{8888C79C-EDAA-4451-BF0E-D1ECE493EBD9}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RBantamweightRank"
+          DTS:DTSID="{E3D83130-4BA0-4FA1-A8A6-FA8E844A269C}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RFlyweightRank"
+          DTS:DTSID="{730325E6-6D48-4475-9AB7-09C994F30F49}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RPFPRank"
+          DTS:DTSID="{51AA9051-25AB-475A-AC17-97A6613E6747}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BWFlyweightRank"
+          DTS:DTSID="{B14B77AF-E0A4-4A26-A118-2BFC32BEE0D6}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BWFeatherweightRank"
+          DTS:DTSID="{258EA40D-09B8-4C41-B99B-488802559DD4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BWStrawweightRank"
+          DTS:DTSID="{0B1717B8-EB35-4608-92EE-B829BD77DC74}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BWBantamweightRank"
+          DTS:DTSID="{DD3164D8-CA2A-4C3B-9BE9-9933CD56BB2F}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BHeavyweightRank"
+          DTS:DTSID="{A21BF82F-4D46-416D-9AD6-8F4E4657B8D2}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BLightHeavyweightRank"
+          DTS:DTSID="{F87DFE79-FAC5-433D-90BA-B208BE37C981}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BMiddleweightRank"
+          DTS:DTSID="{55DD6A75-68DA-40E7-A364-A1E23A836D0A}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BWelterweightRank"
+          DTS:DTSID="{4B6D69E3-512C-47E8-AB7C-074DE175F6A3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BLightweightRank"
+          DTS:DTSID="{F75F4A7F-475A-462A-8D81-A4AE911BB6E1}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BFeatherweightRank"
+          DTS:DTSID="{E2483C9D-5B4E-4368-A325-29CEA2857AE2}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BBantamweightRank"
+          DTS:DTSID="{0731342F-C28B-4038-B2BA-8F738E4A6379}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BFlyweightRank"
+          DTS:DTSID="{F226BF2E-9FD9-42C9-858B-C56A0D7C86BC}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BPFPRank"
+          DTS:DTSID="{D90B10FA-7A8A-4A27-AC9C-CC0D545920C7}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BetterRank"
+          DTS:DTSID="{538485E9-73C6-43F6-9FC4-467F0E873A81}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Finish"
+          DTS:DTSID="{42E8C880-1E83-40BA-983B-BF76D9FD062E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:MaximumWidth="100"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="FinishDetails"
+          DTS:DTSID="{1BFA9B8A-180F-483D-A8C2-09B508F2BF5B}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="FinishRound"
+          DTS:DTSID="{BC866F4F-656B-4B1E-BF9E-50426AF33569}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="7"
+          DTS:TextQualified="True"
+          DTS:ObjectName="FinishRoundTime"
+          DTS:DTSID="{1D676643-AAD4-4E6D-AB9A-1BA2D1100408}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="TotalFightTimeSecs"
+          DTS:DTSID="{B27B1897-2BB2-4A6A-A63C-BAD597899709}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RedDecOdds"
+          DTS:DTSID="{C2E128A1-256B-4E3C-B7C5-7FDF9F2092AD}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BlueDecOdds"
+          DTS:DTSID="{C73FC8D8-DB14-4750-8E2D-7CFFD9886AC7}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RSubOdds"
+          DTS:DTSID="{A0DCE94B-D637-4683-B5F0-F776FCC57EB3}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BSubOdds"
+          DTS:DTSID="{4DC567EB-57B2-4779-BEFD-1278827C99B0}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x003B_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="RKOOdds"
+          DTS:DTSID="{25D9C799-B3CF-4AAD-911F-C2BB3F21EA78}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000A_"
+          DTS:DataType="4"
+          DTS:TextQualified="True"
+          DTS:ObjectName="BKOOdds"
+          DTS:DTSID="{5948FDA5-CD96-497A-8AE5-D1C7652EC00A}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

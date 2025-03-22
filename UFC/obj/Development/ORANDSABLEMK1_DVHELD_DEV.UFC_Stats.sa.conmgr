@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="ORANDSABLEMK1_DVHELD_DEV.UFC_Stats.sa"
+  DTS:DTSID="{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=ORANDSABLEMK1\DVHELD_DEV;User ID=sa;Initial Catalog=UFC_Stats;Persist Security Info=True;Application Name=SSIS-UFC-{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAO5mAGb+yU6X2osQ7aRtkAAAAAACAAAAAAAQZgAAAAEAACAAAACEO3tKlo6br62nMvaE/ydxIG6FDL1Or0D9uMhd2O40MgAAAAAOgAAAAAIAACAAAADndaKRZJxFTjjYnQHa2LjtdVffri8dfC9R9sUyBLJykIAAAAANVgfDO/49FVa/VFVRhD5IsiRMWQrbDzvEtk8NLPXIfDplwIbyKPuzhr/l8x/AV/nAc8p87XRC3qYDko82k0/m+mWxJhQWen3wytHZj4yqtc/Il4CiXYM3OfnmSlgyCFFETkpk6HImIdTkW8AYLJh5S4HajnRgt4KIdh91Myi8gEAAAACeiU1tzo25FjVorXJg6QLmnJwdvSIXYA/6TZ1B2KnLkHYZ+JmrvVTgAiGY3I0gFCNN5ZPXPs757oPpewdMMDjC</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
