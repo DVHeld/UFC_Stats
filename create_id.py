@@ -19,29 +19,21 @@ def create_fight_id() -> bool:
         file_path = Path(__file__).parent / 'data' / 'ufc-master_processed.csv'
         
         with open(file_path, "w+", encoding='utf-8-sig', newline='') as output_file:
-
-            column_headers = "fight_id;fight_alternate_id"
+            column_headers = "fight_id;fight_alternate_id;fighter_alternate_id_red;fighter_alternate_id_blue"
             for header_name in next(downloaded_data):
-                #Exclude fighter details
-                if header_name in ["BlueFighter", "RedFighter"]:
-                    header_name += "ID"
-                if header_name not in ["RedStance", "BlueStance", "RedHeightCms",\
-                                       "BlueHeightCms", "RedReachCms", "BlueReachCms"]:
-                    column_headers += ";" + header_name
+                column_headers += ";" + header_name
             output_file.write(column_headers + "\n")
 
-            # Write each fight's data into the output file
             fight_id = 0
             for row in downloaded_data:
+                # Create new fight_id, red and blue fighter_alternate_id
                 record = str(fight_id) + ";" + row[6].replace("-", "") + "-" +\
                          _remove_accents(row[0]).lower().replace(" ", "_") + "-" +\
                          _remove_accents(row[1]).lower().replace(" ", "_")
-                for stat_no, stat in enumerate(row):
-                    if stat_no not in [33, 34, 35, 56, 57, 58]:
-                        if stat_no in [0, 1]:
-                            record += ";" + _remove_accents(stat).lower().replace(" ", "-")
-                        else:
-                            record += ";" + _remove_accents(stat).replace(".", ",")
+                record += ";" + _remove_accents(row[0]).lower().replace(" ", "-")
+                record += ";" + _remove_accents(row[1]).lower().replace(" ", "-")
+                for stat in row:
+                    record += ";" + _remove_accents(stat).replace(".", ",")
                 output_file.write(record + "\n")
                 fight_id += 1
     return True
