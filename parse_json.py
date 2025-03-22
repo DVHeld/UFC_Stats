@@ -3,6 +3,10 @@
 from os import path
 from pathlib import Path
 from json import loads
+from unicodedata import normalize, combining
+
+def _remove_accents(text: str) -> str:
+    return ''.join([char for char in normalize('NFKD', text) if not combining(char)])
 
 def parse_fighters() -> bool:
     """Parses the input fighters.json file into a correctly formatted csv.
@@ -54,7 +58,7 @@ def parse_fighters() -> bool:
                 while stat != header_names[position]:
                     record += ";"
                     position += 1
-                record += ";" + value
+                record += ";" + _remove_accents(value)
                 position += 1
 
             output_file.write(record + "\n")
