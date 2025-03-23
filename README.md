@@ -10,3 +10,9 @@ The sources for the raw data are:
 I process the fighters.json data using simple Python to convert it into a CSV that includes a fighter_id field. The ufc-master.csv is also missing a unique fight_id which I create in a SSIS task. An extra intermediary table is also created to transform a many-to-many connection in the data model into one-to-many connections. The data is then loaded into a SQL Server database, from which it's consumed by the Power BI and Excel PowerPivot reports. At least that's the plan.
 
 Any suggestions on improvements are welcome, but only on already "feature-complete" parts, since my goal is to start by doing things by myself.
+
+KNOWN ISSUES
+
+* There's duplicated fighters in the Fighters table. This is because they come from the fighters source with their name and surname flipped in the fighter_alternate_id.
+
+* There are fighters that are missing their gender. Partially related to the previous issue.
