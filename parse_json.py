@@ -1,12 +1,17 @@
 """Octagon-API JSON to CSV Parsing"""
 
-from os import path
 from pathlib import Path
 from json import loads
 from unicodedata import normalize, combining
+from string import ascii_letters
 
 def _remove_accents(text: str) -> str:
     return ''.join([char for char in normalize('NFKD', text) if not combining(char)])
+
+def _cleanup(text: str) -> str:
+    allowed_characters = ascii_letters + '-'
+    translation_table = {ord(char): None for char in ''.join(set(text)) if char not in allowed_characters}
+    return text.translate(translation_table)
 
 def parse_fighters() -> bool:
     """Parses the input fighters.json file into a correctly formatted csv.
@@ -18,20 +23,7 @@ def parse_fighters() -> bool:
     with open(file_path, "r", encoding="utf-8") as input_file:
         downloaded_data = loads(input_file.read())
     file_path = Path(__file__).parent / 'data' / 'fighters.csv'
-    if path.exists(file_path):
-        mode = 'r+'
-    else:
-        mode = "w+"
-    with open(file_path, mode, encoding='utf-8-sig', newline='') as output_file:
-
-        # Existing fighters to skip
-        if mode == "r+":
-            to_skip = []
-            output_file.readline()
-            fighter = output_file.readline()
-            while fighter:
-                to_skip.append(fighter.split(";")[1])
-                fighter = output_file.readline()
+    with open(file_path, "w+", encoding='utf-8-sig', newline='') as output_file:
 
         # Get column header names for synching
         header_names = []
@@ -42,25 +34,27 @@ def parse_fighters() -> bool:
         output_file.seek(0)
 
         # Adding column headers to newly created file
-        if mode == "w+":
-            column_headers = "fighter_id;fighter_alternate_id"
-            for header_name in header_names:
-                column_headers += ";" + header_name
-            output_file.write(column_headers + "\n")
+        column_headers = 'fighter_id;fighter_alternate_id'
+        for header_name in header_names:
+            column_headers += ';' + header_name
+        output_file.write(column_headers + '\n')
 
         # Write each fighter's data into the output file
         for fighter_alternate_id, fighter_data in downloaded_data.items():
             position = 0
-            record = str(fighter_id) + ";" + fighter_alternate_id
+            record = str(fighter_id) + ';' + _cleanup(fighter_alternate_id)
 
             # Synch for empty data
             for stat, value in fighter_data.items():
                 while stat != header_names[position]:
-                    record += ";"
+                    record += ';'
                     position += 1
-                record += ";" + _remove_accents(value)
+                if stat == 'category':
+                    record += ';' + _remove_accents(value).replace(' Division', '')
+                else:
+                    record += ';' + _remove_accents(value)
                 position += 1
 
-            output_file.write(record + "\n")
+            output_file.write(record + '\n')
             fighter_id += 1
     return True
