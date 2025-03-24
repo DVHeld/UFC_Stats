@@ -20,7 +20,7 @@
           DTS:DataType="2"
           DTS:TextQualified="True"
           DTS:ObjectName="fighter_id"
-          DTS:DTSID="{5324FACF-A13D-42DB-B3A2-B4CD7C35F3C7}"
+          DTS:DTSID="{AC73DE4D-0314-4B67-9734-588B2A3858D2}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -29,7 +29,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="fighter_alternate_id"
-          DTS:DTSID="{1D33358B-A233-4D9A-B3E4-23E2F7930D0C}"
+          DTS:DTSID="{2E03C3D4-E5E1-4B8E-9898-0C142C53D0A9}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="category"
-          DTS:DTSID="{277F1FFA-6BA8-4FDA-B4F5-EDFF1A709188}"
+          DTS:DTSID="{B48C4C69-5F6F-4AB9-AE60-B5FC2417BC14}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -46,7 +46,7 @@
           DTS:DataType="16"
           DTS:TextQualified="True"
           DTS:ObjectName="draws"
-          DTS:DTSID="{A706996C-C57F-4EF1-864F-26D6C5ED7617}"
+          DTS:DTSID="{0EADFAA3-B604-419A-89CC-70FFCD99D737}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -55,7 +55,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="imgUrl"
-          DTS:DTSID="{C4D36B7A-B0E2-4830-BDAD-95AE2623D83C}"
+          DTS:DTSID="{1863506E-6920-47E8-8218-519DB495547D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -63,7 +63,7 @@
           DTS:DataType="16"
           DTS:TextQualified="True"
           DTS:ObjectName="losses"
-          DTS:DTSID="{3D5839D9-53A3-4E9F-816B-7DAFCEB71629}"
+          DTS:DTSID="{425F2AF7-5AA7-429F-B672-680796F5C3CA}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -72,7 +72,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="name"
-          DTS:DTSID="{5FFC7F60-9CE1-4E06-A54E-63A6E710DFC3}"
+          DTS:DTSID="{3BEB5EEC-33A1-4F07-9CBA-C5C1CE8752DE}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -81,7 +81,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="nickname"
-          DTS:DTSID="{83B7C0EE-9874-4491-951A-A59A6369751B}"
+          DTS:DTSID="{5536C246-BF1D-4958-945B-5FE0648D6AA8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -89,7 +89,7 @@
           DTS:DataType="16"
           DTS:TextQualified="True"
           DTS:ObjectName="wins"
-          DTS:DTSID="{C8C028BB-3F3D-4E08-87DE-D5E49FBF3A93}"
+          DTS:DTSID="{10C4CCBB-31D3-4079-8E03-ED15F91F0249}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -98,7 +98,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="status"
-          DTS:DTSID="{23A0B11B-A458-4A7A-866D-EDCD7E26AC0F}"
+          DTS:DTSID="{41A7B34A-F12F-4A83-8FEF-9F5E320D2AFE}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -107,7 +107,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="placeOfBirth"
-          DTS:DTSID="{E9E81047-1C67-4A15-A405-703CC88A6811}"
+          DTS:DTSID="{18B9AA38-B0DB-4777-8C18-CE15ACA92795}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -116,7 +116,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="trainsAt"
-          DTS:DTSID="{4DB58F72-9E82-45D9-A8D6-430C77637994}"
+          DTS:DTSID="{7916E850-60C3-485A-A22D-F39BA76A692C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -125,7 +125,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="fightingStyle"
-          DTS:DTSID="{EECF87C9-9018-4C59-833A-76D82A4C80AC}"
+          DTS:DTSID="{D883F0C3-7AD7-49D8-88E5-B69DCBF71C5F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -133,7 +133,7 @@
           DTS:DataType="16"
           DTS:TextQualified="True"
           DTS:ObjectName="age"
-          DTS:DTSID="{7C5D67C5-994A-4539-B5C2-F3CBE07BB3B4}"
+          DTS:DTSID="{F918BE8C-EF60-4B1D-AC5B-0CC6D1FD4F00}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -141,7 +141,7 @@
           DTS:DataType="4"
           DTS:TextQualified="True"
           DTS:ObjectName="height"
-          DTS:DTSID="{DCB0A6EB-E4D5-403C-B494-D7A01563088D}"
+          DTS:DTSID="{3E55D9F5-9D9F-43F0-996E-0EAB4016F1F1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -149,7 +149,7 @@
           DTS:DataType="4"
           DTS:TextQualified="True"
           DTS:ObjectName="weight"
-          DTS:DTSID="{40F2FBCD-F968-4BA4-8E19-102E140BA929}"
+          DTS:DTSID="{81A5F819-9B44-4B67-A1D9-F5FF990EF601}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -157,7 +157,7 @@
           DTS:DataType="7"
           DTS:TextQualified="True"
           DTS:ObjectName="octagonDebut"
-          DTS:DTSID="{1EA50CDE-1D8D-4678-B172-161C96297B24}"
+          DTS:DTSID="{C4E10826-C956-49F7-A833-8B9B3955AA04}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
           DTS:DataType="4"
           DTS:TextQualified="True"
           DTS:ObjectName="reach"
-          DTS:DTSID="{1338B2EA-48E1-401A-AA06-A5E65A0D95F3}"
+          DTS:DTSID="{5251813C-4E2F-4BC3-83EC-83E4FABEAB1E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -173,7 +173,7 @@
           DTS:DataType="4"
           DTS:TextQualified="True"
           DTS:ObjectName="legReach"
-          DTS:DTSID="{16D25882-8D33-42D1-B445-4A1432C8B626}"
+          DTS:DTSID="{8248773A-82F9-49A5-B640-EF4455DE5724}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

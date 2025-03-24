@@ -11,8 +11,8 @@
   DTS:LocaleID="13322"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{75F61805-E606-45BD-838B-D34A0A91B711}">
+  DTS:VersionBuild="174"
+  DTS:VersionGUID="{F37FA488-357D-48AD-96F4-2EBAB28C8191}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm7Yfy4LfbUWZzoRFb9tm9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD98ErbMJQ/Sf4gav/9gQN53XsO7TOIJ5BYa31haTeS5AAAAAAOgAAAAAIAACAAAADJAt5Vm0oCuZf0jGbZUOyc8Jc1trLDKoPv/vsfxvodhRAAAADbC6UMDtK0Um0H6GNNDjpjQAAAAMmT6qEAN+2adBa3Kw6TJnS6FXsbO8PAJxwo3SVuw/kvzywwOAgKwGmyb95AEjfwrJNyGoOF/eLriSliXfjtIgY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm7Yfy4LfbUWZzoRFb9tm9AAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACx73WOd7uaY7IOzA6rk3KLsvvcrH286XU50zcZ3ApzQAAAAAOgAAAAAIAACAAAACRBNfPKc8GnDvhda6f3K/YZxvTmHQawv6DKbndV7zUKhAAAABs/Cl+BRcQH137LDncP2SNQAAAAKx1SEyFEbDbqPbKtn+knend1nPwRmySTaAMSVNiONiq1dvu+jzB+yMNo5R8jt2DU5/6YNdwpd9hWtm3AmGe+aI</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -45,7 +45,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear Fighters Table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -58,6 +58,7 @@
       DTS:refId="Package\Clear Fighters_Fights Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{1ee8d2bd-ed60-4152-a91f-8ce12b495f15}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -81,7 +82,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear UFC-Master Table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -99,19 +100,20 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Create Fighters Table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1D735DA-2CA6-4546-950B-4B1AA51A6161}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="CREATE TABLE [Fighters] (&#xA;    [fighter_id] smallint,&#xA;    [fighter_alternate_id] varchar(100),&#xA;    [category] varchar(100),&#xA;    [gender] varchar(100),&#xA;    [draws] smallint,&#xA;    [imgUrl] varchar(500),&#xA;    [losses] smallint,&#xA;    [name] varchar(100),&#xA;    [nickname] varchar(100),&#xA;    [wins] smallint,&#xA;    [status] varchar(100),&#xA;    [placeOfBirth] varchar(100),&#xA;    [trainsAt] varchar(100),&#xA;    [fightingStyle] varchar(100),&#xA;    [age] smallint,&#xA;    [height] real,&#xA;    [weight] real,&#xA;    [octagonDebut] datetime,&#xA;    [reach] real,&#xA;    [legReach] real&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="CREATE TABLE [Fighters] (&#xA;    [fighter_id] smallint,&#xA;    [fighter_alternate_id] varchar(100),&#xA;    [name] varchar(100),&#xA;    [nickname] varchar(100),&#xA;    [gender] varchar(100),&#xA;    [age] smallint,&#xA;    [height] real,&#xA;    [weight] real,&#xA;    [reach] real,&#xA;    [legReach] real,&#xA;    [category] varchar(100),&#xA;    [placeOfBirth] varchar(100),&#xA;    [trainsAt] varchar(100),&#xA;    [fightingStyle] varchar(100),&#xA;    [wins] smallint,&#xA;    [draws] smallint,&#xA;    [imgUrl] varchar(500),&#xA;    [losses] smallint,&#xA;    [status] varchar(100),&#xA;    [octagonDebut] datetime,&#xA;    [current_lose_streak] smallint,&#xA;    [current_win_sreak] smallint,&#xA;    [avg_sig_str_landed] real,&#xA;    [avg_sig_str_pct] real,&#xA;    [avg_sub_att] real,&#xA;    [avg_td_landed] real,&#xA;    [avg_td_pct] real,&#xA;    [longest_win_streak] smallint,&#xA;    [total_rounds_fought] smallint,&#xA;    [total_title_bouts] smallint,&#xA;    [wins_by_decision_majority] smallint,&#xA;    [wins_by_decision_split] smallint,&#xA;    [wins_by_decision_unanimous] smallint,&#xA;    [wins_by_ko] smallint,&#xA;    [wins_by_submission] smallint,&#xA;    [wins_by_tko] smallint,&#xA;    [match_wc_rank] smallint,&#xA;    [w_flyweight_rank] smallint,&#xA;    [w_featherweight_rank] smallint,&#xA;    [w_srawweight_rank] smallint,&#xA;    [w_bantamweight_rank] smallint,&#xA;    [heavyweight_rank] smallint,&#xA;    [light_heavyweight_rank] smallint,&#xA;    [middleweight_rank] smallint,&#xA;    [welterweight_rank] smallint,&#xA;    [lightweight_rank] smallint,&#xA;    [featherweight_rank] smallint,&#xA;    [bantamweight_rank] smallint,&#xA;    [flyweight_rank] smallint,&#xA;    [pound_for_pound_rank] smallint,&#xA;    [last_updated] datetime&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Create Fighters_Fights Table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{9CD5762F-6E1C-4DED-BEF3-7168F74E433D}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -135,13 +137,13 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Create UFC-Master Table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1D735DA-2CA6-4546-950B-4B1AA51A6161}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="CREATE TABLE [UFC-Master] (&#xA;    [fight_id] smallint,&#xA;    [fight_alternate_id] varchar(100),&#xA;    [RedOdds] real,&#xA;    [BlueOdds] real,&#xA;    [RedExpectedValue] real,&#xA;    [BlueExpectedValue] real,&#xA;    [Date] datetime,&#xA;    [Location] varchar(100),&#xA;    [Country] varchar(200),&#xA;    [Winner] varchar(100),&#xA;    [TitleBout] bit,&#xA;    [WeightClass] varchar(100),&#xA;    [Gender] varchar(100),&#xA;    [NumberOfRounds] smallint,&#xA;    [BlueCurrentLoseStreak] smallint,&#xA;    [BlueCurrentWinStreak] smallint,&#xA;    [BlueDraws] smallint,&#xA;    [BlueAvgSigStrLanded] real,&#xA;    [BlueAvgSigStrPct] real,&#xA;    [BlueAvgSubAtt] real,&#xA;    [BlueAvgTDLanded] real,&#xA;    [BlueAvgTDPct] real,&#xA;    [BlueLongestWinStreak] smallint,&#xA;    [BlueLosses] smallint,&#xA;    [BlueTotalRoundsFought] smallint,&#xA;    [BlueTotalTitleBouts] smallint,&#xA;    [BlueWinsByDecisionMajority] smallint,&#xA;    [BlueWinsByDecisionSplit] smallint,&#xA;    [BlueWinsByDecisionUnanimous] smallint,&#xA;    [BlueWinsByKO] smallint,&#xA;    [BlueWinsBySubmission] smallint,&#xA;    [BlueWinsByTKODoctorStoppage] smallint,&#xA;    [BlueWins] smallint,&#xA;    [BlueWeightLbs] smallint,&#xA;    [RedCurrentLoseStreak] smallint,&#xA;    [RedCurrentWinStreak] smallint,&#xA;    [RedDraws] smallint,&#xA;    [RedAvgSigStrLanded] real,&#xA;    [RedAvgSigStrPct] real,&#xA;    [RedAvgSubAtt] real,&#xA;    [RedAvgTDLanded] real,&#xA;    [RedAvgTDPct] real,&#xA;    [RedLongestWinStreak] smallint,&#xA;    [RedLosses] smallint,&#xA;    [RedTotalRoundsFought] smallint,&#xA;    [RedTotalTitleBouts] smallint,&#xA;    [RedWinsByDecisionMajority] smallint,&#xA;    [RedWinsByDecisionSplit] smallint,&#xA;    [RedWinsByDecisionUnanimous] smallint,&#xA;    [RedWinsByKO] smallint,&#xA;    [RedWinsBySubmission] smallint,&#xA;    [RedWinsByTKODoctorStoppage] smallint,&#xA;    [RedWins] smallint,&#xA;    [RedWeightLbs] smallint,&#xA;    [RedAge] smallint,&#xA;    [BlueAge] smallint,&#xA;    [LoseStreakDif] smallint,&#xA;    [WinStreakDif] smallint,&#xA;    [LongestWinStreakDif] smallint,&#xA;    [WinDif] smallint,&#xA;    [LossDif] smallint,&#xA;    [TotalRoundDif] smallint,&#xA;    [TotalTitleBoutDif] smallint,&#xA;    [KODif] smallint,&#xA;    [SubDif] smallint,&#xA;    [HeightDif] real,&#xA;    [ReachDif] real,&#xA;    [AgeDif] smallint,&#xA;    [SigStrDif] real,&#xA;    [AvgSubAttDif] real,&#xA;    [AvgTDDif] real,&#xA;    [EmptyArena] real,&#xA;    [BMatchWCRank] real,&#xA;    [RMatchWCRank] real,&#xA;    [RWFlyweightRank] real,&#xA;    [RWFeatherweightRank] real,&#xA;    [RWStrawweightRank] real,&#xA;    [RWBantamweightRank] real,&#xA;    [RHeavyweightRank] real,&#xA;    [RLightHeavyweightRank] real,&#xA;    [RMiddleweightRank] real,&#xA;    [RWelterweightRank] real,&#xA;    [RLightweightRank] real,&#xA;    [RFeatherweightRank] real,&#xA;    [RBantamweightRank] real,&#xA;    [RFlyweightRank] real,&#xA;    [RPFPRank] real,&#xA;    [BWFlyweightRank] real,&#xA;    [BWFeatherweightRank] real,&#xA;    [BWStrawweightRank] real,&#xA;    [BWBantamweightRank] real,&#xA;    [BHeavyweightRank] real,&#xA;    [BLightHeavyweightRank] real,&#xA;    [BMiddleweightRank] real,&#xA;    [BWelterweightRank] real,&#xA;    [BLightweightRank] real,&#xA;    [BFeatherweightRank] real,&#xA;    [BBantamweightRank] real,&#xA;    [BFlyweightRank] real,&#xA;    [BPFPRank] real,&#xA;    [BetterRank] varchar(100),&#xA;    [Finish] varchar(100),&#xA;    [FinishDetails] varchar(100),&#xA;    [FinishRound] real,&#xA;    [FinishRoundTime] datetime,&#xA;    [TotalFightTimeSecs] real,&#xA;    [RedDecOdds] real,&#xA;    [BlueDecOdds] real,&#xA;    [RSubOdds] real,&#xA;    [BSubOdds] real,&#xA;    [RKOOdds] real,&#xA;    [BKOOdds] real,&#xA;    [fighter_alternate_id_red] varchar(100),&#xA;    [fighter_alternate_id_blue] varchar(100),&#xA;    [RedFighter] varchar(100),&#xA;    [BlueFighter] varchar(100),&#xA;    [BlueStance] varchar(100),&#xA;    [BlueHeightCms] real,&#xA;    [BlueReachCms] real,&#xA;    [RedStance] varchar(100),&#xA;    [RedHeightCms] real,&#xA;    [RedReachCms] real&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="CREATE TABLE [UFC-Master] (&#xA;    [fight_id] smallint,&#xA;    [fight_alternate_id] varchar(100),&#xA;    [fighter_alternate_id_red] varchar(100),&#xA;    [fighter_alternate_id_blue] varchar(100),&#xA;    [RedFighter] varchar(100),&#xA;    [BlueFighter] varchar(100),&#xA;    [Gender] varchar(100),&#xA;    [BlueStance] varchar(100),&#xA;    [BlueHeightCms] real,&#xA;    [BlueReachCms] real,&#xA;    [RedStance] varchar(100),&#xA;    [RedHeightCms] real,&#xA;    [RedReachCms] real,&#xA;    [RedOdds] real,&#xA;    [BlueOdds] real,&#xA;    [RedExpectedValue] real,&#xA;    [BlueExpectedValue] real,&#xA;    [Date] datetime,&#xA;    [Location] varchar(100),&#xA;    [Country] varchar(200),&#xA;    [Winner] varchar(100),&#xA;    [TitleBout] bit,&#xA;    [WeightClass] varchar(100),&#xA;    [NumberOfRounds] smallint,&#xA;    [BlueCurrentLoseStreak] smallint,&#xA;    [BlueCurrentWinStreak] smallint,&#xA;    [BlueDraws] smallint,&#xA;    [BlueAvgSigStrLanded] real,&#xA;    [BlueAvgSigStrPct] real,&#xA;    [BlueAvgSubAtt] real,&#xA;    [BlueAvgTDLanded] real,&#xA;    [BlueAvgTDPct] real,&#xA;    [BlueLongestWinStreak] smallint,&#xA;    [BlueLosses] smallint,&#xA;    [BlueTotalRoundsFought] smallint,&#xA;    [BlueTotalTitleBouts] smallint,&#xA;    [BlueWinsByDecisionMajority] smallint,&#xA;    [BlueWinsByDecisionSplit] smallint,&#xA;    [BlueWinsByDecisionUnanimous] smallint,&#xA;    [BlueWinsByKO] smallint,&#xA;    [BlueWinsBySubmission] smallint,&#xA;    [BlueWinsByTKODoctorStoppage] smallint,&#xA;    [BlueWins] smallint,&#xA;    [BlueWeightLbs] smallint,&#xA;    [RedCurrentLoseStreak] smallint,&#xA;    [RedCurrentWinStreak] smallint,&#xA;    [RedDraws] smallint,&#xA;    [RedAvgSigStrLanded] real,&#xA;    [RedAvgSigStrPct] real,&#xA;    [RedAvgSubAtt] real,&#xA;    [RedAvgTDLanded] real,&#xA;    [RedAvgTDPct] real,&#xA;    [RedLongestWinStreak] smallint,&#xA;    [RedLosses] smallint,&#xA;    [RedTotalRoundsFought] smallint,&#xA;    [RedTotalTitleBouts] smallint,&#xA;    [RedWinsByDecisionMajority] smallint,&#xA;    [RedWinsByDecisionSplit] smallint,&#xA;    [RedWinsByDecisionUnanimous] smallint,&#xA;    [RedWinsByKO] smallint,&#xA;    [RedWinsBySubmission] smallint,&#xA;    [RedWinsByTKODoctorStoppage] smallint,&#xA;    [RedWins] smallint,&#xA;    [RedWeightLbs] smallint,&#xA;    [RedAge] smallint,&#xA;    [BlueAge] smallint,&#xA;    [LoseStreakDif] smallint,&#xA;    [WinStreakDif] smallint,&#xA;    [LongestWinStreakDif] smallint,&#xA;    [WinDif] smallint,&#xA;    [LossDif] smallint,&#xA;    [TotalRoundDif] smallint,&#xA;    [TotalTitleBoutDif] smallint,&#xA;    [KODif] smallint,&#xA;    [SubDif] smallint,&#xA;    [HeightDif] real,&#xA;    [ReachDif] real,&#xA;    [AgeDif] smallint,&#xA;    [SigStrDif] real,&#xA;    [AvgSubAttDif] real,&#xA;    [AvgTDDif] real,&#xA;    [EmptyArena] real,&#xA;    [BMatchWCRank] real,&#xA;    [RMatchWCRank] real,&#xA;    [RWFlyweightRank] real,&#xA;    [RWFeatherweightRank] real,&#xA;    [RWStrawweightRank] real,&#xA;    [RWBantamweightRank] real,&#xA;    [RHeavyweightRank] real,&#xA;    [RLightHeavyweightRank] real,&#xA;    [RMiddleweightRank] real,&#xA;    [RWelterweightRank] real,&#xA;    [RLightweightRank] real,&#xA;    [RFeatherweightRank] real,&#xA;    [RBantamweightRank] real,&#xA;    [RFlyweightRank] real,&#xA;    [RPFPRank] real,&#xA;    [BWFlyweightRank] real,&#xA;    [BWFeatherweightRank] real,&#xA;    [BWStrawweightRank] real,&#xA;    [BWBantamweightRank] real,&#xA;    [BHeavyweightRank] real,&#xA;    [BLightHeavyweightRank] real,&#xA;    [BMiddleweightRank] real,&#xA;    [BWelterweightRank] real,&#xA;    [BLightweightRank] real,&#xA;    [BFeatherweightRank] real,&#xA;    [BBantamweightRank] real,&#xA;    [BFlyweightRank] real,&#xA;    [BPFPRank] real,&#xA;    [BetterRank] varchar(100),&#xA;    [Finish] varchar(100),&#xA;    [FinishDetails] varchar(100),&#xA;    [FinishRound] real,&#xA;    [FinishRoundTime] datetime,&#xA;    [TotalFightTimeSecs] real,&#xA;    [RedDecOdds] real,&#xA;    [BlueDecOdds] real,&#xA;    [RSubOdds] real,&#xA;    [BSubOdds] real,&#xA;    [RKOOdds] real,&#xA;    [BKOOdds] real&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -193,11 +195,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[fighter_id]"
                       dataType="i2"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[fighter_id]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[fighter_id]"
                       name="fighter_id"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -214,12 +216,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[fighter_alternate_id]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[fighter_alternate_id]"
                       name="fighter_alternate_id"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -236,12 +238,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[category]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[category]"
                       name="category"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -257,11 +259,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[draws]"
                       dataType="i1"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[draws]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[draws]"
                       name="draws"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -278,12 +280,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[imgUrl]"
                       length="500"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[imgUrl]"
                       name="imgUrl"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -299,11 +301,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[losses]"
                       dataType="i1"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[losses]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[losses]"
                       name="losses"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -320,12 +322,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[name]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[name]"
                       name="name"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -342,12 +344,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[nickname]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[nickname]"
                       name="nickname"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -363,11 +365,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[wins]"
                       dataType="i1"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[wins]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[wins]"
                       name="wins"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -384,12 +386,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[status]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[status]"
                       name="status"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -406,12 +408,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[placeOfBirth]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[placeOfBirth]"
                       name="placeOfBirth"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -428,12 +430,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[trainsAt]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[trainsAt]"
                       name="trainsAt"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -450,12 +452,12 @@
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[fightingStyle]"
                       length="100"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[fightingStyle]"
                       name="fightingStyle"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -471,11 +473,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[age]"
                       dataType="i1"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[age]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[age]"
                       name="age"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -491,11 +493,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[height]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[height]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[height]"
                       name="height"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -511,11 +513,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[weight]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[weight]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[weight]"
                       name="weight"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -531,11 +533,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[octagonDebut]"
                       dataType="date"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[octagonDebut]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[octagonDebut]"
                       name="octagonDebut"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -551,11 +553,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[reach]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[reach]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[reach]"
                       name="reach"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -571,11 +573,11 @@
                       refId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[legReach]"
                       dataType="r4"
                       errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[legReach]"
                       lineageId="Package\Fighters Load\fighters CSV.Outputs[Salida de origen de archivo plano].Columns[legReach]"
                       name="legReach"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -892,11 +894,11 @@
                 <property
                   dataType="System.Boolean"
                   description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepIdentity">false</property>
+                  name="FastLoadKeepIdentity">true</property>
                 <property
                   dataType="System.Boolean"
                   description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepNulls">false</property>
+                  name="FastLoadKeepNulls">true</property>
                 <property
                   dataType="System.String"
                   description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
@@ -1157,6 +1159,130 @@
                       dataType="str"
                       length="100"
                       name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[current_lose_streak]"
+                      dataType="i2"
+                      name="current_lose_streak" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[current_win_sreak]"
+                      dataType="i2"
+                      name="current_win_sreak" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_sig_str_landed]"
+                      dataType="r4"
+                      name="avg_sig_str_landed" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_sig_str_pct]"
+                      dataType="r4"
+                      name="avg_sig_str_pct" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_sub_att]"
+                      dataType="r4"
+                      name="avg_sub_att" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_td_landed]"
+                      dataType="r4"
+                      name="avg_td_landed" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[avg_td_pct]"
+                      dataType="r4"
+                      name="avg_td_pct" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[longest_win_streak]"
+                      dataType="i2"
+                      name="longest_win_streak" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[total_rounds_fought]"
+                      dataType="i2"
+                      name="total_rounds_fought" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[total_title_bouts]"
+                      dataType="i2"
+                      name="total_title_bouts" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[wins_by_decision_majority]"
+                      dataType="i2"
+                      name="wins_by_decision_majority" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[wins_by_decision_split]"
+                      dataType="i2"
+                      name="wins_by_decision_split" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[wins_by_decision_unanimous]"
+                      dataType="i2"
+                      name="wins_by_decision_unanimous" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[wins_by_ko]"
+                      dataType="i2"
+                      name="wins_by_ko" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[wins_by_submission]"
+                      dataType="i2"
+                      name="wins_by_submission" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[wins_by_tko]"
+                      dataType="i2"
+                      name="wins_by_tko" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[match_wc_rank]"
+                      dataType="i2"
+                      name="match_wc_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[w_flyweight_rank]"
+                      dataType="i2"
+                      name="w_flyweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[w_featherweight_rank]"
+                      dataType="i2"
+                      name="w_featherweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[w_srawweight_rank]"
+                      dataType="i2"
+                      name="w_srawweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[w_bantamweight_rank]"
+                      dataType="i2"
+                      name="w_bantamweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[heavyweight_rank]"
+                      dataType="i2"
+                      name="heavyweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[light_heavyweight_rank]"
+                      dataType="i2"
+                      name="light_heavyweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[middleweight_rank]"
+                      dataType="i2"
+                      name="middleweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[welterweight_rank]"
+                      dataType="i2"
+                      name="welterweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[lightweight_rank]"
+                      dataType="i2"
+                      name="lightweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[featherweight_rank]"
+                      dataType="i2"
+                      name="featherweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[bantamweight_rank]"
+                      dataType="i2"
+                      name="bantamweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[flyweight_rank]"
+                      dataType="i2"
+                      name="flyweight_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[pound_for_pound_rank]"
+                      dataType="i2"
+                      name="pound_for_pound_rank" />
+                    <externalMetadataColumn
+                      refId="Package\Fighters Load\Fighters Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[last_updated]"
+                      dataType="dbTimeStamp"
+                      name="last_updated" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1205,6 +1331,7 @@
       DTS:refId="Package\Populate Fighters_Fights"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+      DTS:Disabled="True"
       DTS:DTSID="{F04508AF-6D53-4376-826C-8FEEAD7D46EA}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
@@ -1234,17 +1361,17 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1D735DA-2CA6-4546-950B-4B1AA51A6161}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="ALTER TABLE&#xA;&#x9;[UFC-Master]&#xA;DROP COLUMN&#xA;&#x9;RedFighter,&#xA;&#x9;BlueFighter,&#xA;&#x9;Gender" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="ALTER TABLE&#xA;&#x9;[UFC-Master]&#xA;DROP COLUMN&#xA;&#x9;Gender,&#xA;&#x9;BlueWeightLbs,&#xA;&#x9;BlueAge,&#xA;&#x9;BlueWins,&#xA;&#x9;BlueDraws,&#xA;&#x9;BlueLosses,&#xA;&#x9;BlueCurrentLoseStreak,&#xA;&#x9;BlueCurrentWinStreak,&#xA;&#x9;BlueAvgSigStrLanded,&#xA;&#x9;BlueAvgSigStrPct,&#xA;&#x9;BlueAvgSubAtt,&#xA;&#x9;BlueAvgTDLanded,&#xA;&#x9;BlueAvgTDPct,&#xA;&#x9;BlueLongestWinStreak,&#xA;&#x9;BlueTotalRoundsFought,&#xA;&#x9;BlueTotalTitleBouts,&#xA;&#x9;BlueWinsByDecisionMajority,&#xA;&#x9;BlueWinsByDecisionSplit,&#xA;&#x9;BlueWinsByDecisionUnanimous,&#xA;&#x9;BlueWinsByKO,&#xA;&#x9;BlueWinsBySubmission,&#xA;&#x9;BlueWinsByTKODoctorStoppage,&#xA;&#x9;BMatchWCRank,&#xA;&#x9;BWFlyweightRank,&#xA;&#x9;BWFeatherweightRank,&#xA;&#x9;BWStrawweightRank,&#xA;&#x9;BWBantamweightRank,&#xA;&#x9;BHeavyweightRank,&#xA;&#x9;BLightHeavyweightRank,&#xA;&#x9;BMiddleweightRank,&#xA;&#x9;BWelterweightRank,&#xA;&#x9;BLightweightRank,&#xA;&#x9;BFeatherweightRank,&#xA;&#x9;BBantamweightRank,&#xA;&#x9;BFlyweightRank,&#xA;&#x9;BPFPRank,&#xA;&#x9;RedFighter,&#xA;&#x9;RedWeightLbs,&#xA;&#x9;RedAge,&#xA;&#x9;RedWins,&#xA;&#x9;RedDraws,&#xA;&#x9;RedLosses,&#xA;&#x9;RedCurrentLoseStreak,&#xA;&#x9;RedCurrentWinStreak,&#xA;&#x9;RedAvgSigStrLanded,&#xA;&#x9;RedAvgSigStrPct,&#xA;&#x9;RedAvgSubAtt,&#xA;&#x9;RedAvgTDLanded,&#xA;&#x9;RedAvgTDPct,&#xA;&#x9;RedLongestWinStreak,&#xA;&#x9;RedTotalRoundsFought,&#xA;&#x9;RedTotalTitleBouts,&#xA;&#x9;RedWinsByDecisionMajority,&#xA;&#x9;RedWinsByDecisionSplit,&#xA;&#x9;RedWinsByDecisionUnanimous,&#xA;&#x9;RedWinsByKO,&#xA;&#x9;RedWinsBySubmission,&#xA;&#x9;RedWinsByTKODoctorStoppage,&#xA;&#x9;RMatchWCRank,&#xA;&#x9;RWFlyweightRank,&#xA;&#x9;RWFeatherweightRank,&#xA;&#x9;RWStrawweightRank,&#xA;&#x9;RWBantamweightRank,&#xA;&#x9;RHeavyweightRank,&#xA;&#x9;RLightHeavyweightRank,&#xA;&#x9;RMiddleweightRank,&#xA;&#x9;RWelterweightRank,&#xA;&#x9;RLightweightRank,&#xA;&#x9;RFeatherweightRank,&#xA;&#x9;RBantamweightRank,&#xA;&#x9;RFlyweightRank,&#xA;&#x9;RPFPRank" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Transfer gender data"
+      DTS:refId="Package\Transfer data"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{3B4D433B-2D7C-4951-8915-E3BD1002E3D8}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Transfer gender data"
+      DTS:ObjectName="Transfer data"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -1252,7 +1379,7 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1D735DA-2CA6-4546-950B-4B1AA51A6161}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="WITH AllFighters AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_red AS fighter_alternate_id,&#xA;&#x9;&#x9;Gender AS gender&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;&#xA;&#x9;UNION ALL&#xA;&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_blue AS fighter_alternate_id,&#xA;&#x9;&#x9;Gender AS gender&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;), AllDistinctFighters AS (&#xA;&#x9;SELECT DISTINCT&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;gender&#xA;&#x9;FROM&#xA;&#x9;&#x9;AllFighters&#xA;)&#xA;&#xA;UPDATE &#xA;&#x9;f&#xA;SET&#xA;&#x9;f.gender = a.gender&#xA;&#xA;FROM&#xA;&#x9;Fighters f&#xA;&#x9;INNER JOIN [AllDistinctFighters] a ON a.fighter_alternate_id = f.fighter_alternate_id;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="WITH AllFighters AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_red AS fighter_alternate_id,&#xA;&#x9;&#x9;RedFighter AS [name],&#xA;&#x9;&#x9;RedWeightLbs AS [weight],&#xA;&#x9;&#x9;Gender AS gender,&#xA;&#x9;&#x9;WeightClass AS category,&#xA;&#x9;&#x9;RedAge AS age,&#xA;&#x9;&#x9;RedWins AS wins,&#xA;&#x9;&#x9;RedDraws AS draws,&#xA;&#x9;&#x9;RedLosses AS losses,&#xA;&#x9;&#x9;RedCurrentLoseStreak AS current_lose_streak,&#xA;&#x9;&#x9;RedCurrentWinStreak AS current_win_sreak,&#xA;&#x9;&#x9;RedAvgSigStrLanded AS avg_sig_str_landed,&#xA;&#x9;&#x9;RedAvgSigStrPct AS avg_sig_str_pct,&#xA;&#x9;&#x9;RedAvgSubAtt AS avg_sub_att,&#xA;&#x9;&#x9;RedAvgTDLanded AS avg_td_landed,&#xA;&#x9;&#x9;RedAvgTDPct AS avg_td_pct,&#xA;&#x9;&#x9;RedLongestWinStreak AS longest_win_streak,&#xA;&#x9;&#x9;RedTotalRoundsFought AS total_rounds_fought,&#xA;&#x9;&#x9;RedTotalTitleBouts AS total_title_bouts,&#xA;&#x9;&#x9;RedWinsByDecisionMajority AS wins_by_decision_majority,&#xA;&#x9;&#x9;RedWinsByDecisionSplit AS wins_by_decision_split,&#xA;&#x9;&#x9;RedWinsByDecisionUnanimous AS wins_by_decision_unanimous,&#xA;&#x9;&#x9;RedWinsByKO AS wins_by_ko,&#xA;&#x9;&#x9;RedWinsBySubmission AS wins_by_submission,&#xA;&#x9;&#x9;RedWinsByTKODoctorStoppage AS wins_by_tko,&#xA;&#x9;&#x9;RMatchWCRank AS match_wc_rank,&#xA;&#x9;&#x9;RWFlyweightRank AS w_flyweight_rank,&#xA;&#x9;&#x9;RWFeatherweightRank AS w_featherweight_rank,&#xA;&#x9;&#x9;RWStrawweightRank AS w_srawweight_rank,&#xA;&#x9;&#x9;RWBantamweightRank AS w_bantamweight_rank,&#xA;&#x9;&#x9;RHeavyweightRank AS heavyweight_rank,&#xA;&#x9;&#x9;RLightHeavyweightRank AS light_heavyweight_rank,&#xA;&#x9;&#x9;RMiddleweightRank AS middleweight_rank,&#xA;&#x9;&#x9;RWelterweightRank AS welterweight_rank,&#xA;&#x9;&#x9;RLightweightRank AS lightweight_rank,&#xA;&#x9;&#x9;RFeatherweightRank AS featherweight_rank,&#xA;&#x9;&#x9;RBantamweightRank AS bantamweight_rank,&#xA;&#x9;&#x9;RFlyweightRank AS flyweight_rank,&#xA;&#x9;&#x9;RPFPRank AS pound_for_pound_rank,&#xA;&#x9;&#x9;[Date] AS last_updated&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;&#xA;&#x9;UNION ALL&#xA;&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_blue AS fighter_alternate_id,&#xA;&#x9;&#x9;BlueFighter AS [name],&#xA;&#x9;&#x9;BlueWeightLbs AS [weight],&#xA;&#x9;&#x9;Gender AS gender,&#xA;&#x9;&#x9;WeightClass AS category,&#xA;&#x9;&#x9;BlueAge AS age,&#xA;&#x9;&#x9;BlueWins AS wins,&#xA;&#x9;&#x9;BlueDraws AS draws,&#xA;&#x9;&#x9;BlueLosses AS losses,&#xA;&#x9;&#x9;BlueCurrentLoseStreak AS current_lose_streak,&#xA;&#x9;&#x9;BlueCurrentWinStreak AS current_win_sreak,&#xA;&#x9;&#x9;BlueAvgSigStrLanded AS avg_sig_str_landed,&#xA;&#x9;&#x9;BlueAvgSigStrPct AS avg_sig_str_pct,&#xA;&#x9;&#x9;BlueAvgSubAtt AS avg_sub_att,&#xA;&#x9;&#x9;BlueAvgTDLanded AS avg_td_landed,&#xA;&#x9;&#x9;BlueAvgTDPct AS avg_td_pct,&#xA;&#x9;&#x9;BlueLongestWinStreak AS longest_win_streak,&#xA;&#x9;&#x9;BlueTotalRoundsFought AS total_rounds_fought,&#xA;&#x9;&#x9;BlueTotalTitleBouts AS total_title_bouts,&#xA;&#x9;&#x9;BlueWinsByDecisionMajority AS wins_by_decision_majority,&#xA;&#x9;&#x9;BlueWinsByDecisionSplit AS wins_by_decision_split,&#xA;&#x9;&#x9;BlueWinsByDecisionUnanimous AS wins_by_decision_unanimous,&#xA;&#x9;&#x9;BlueWinsByKO AS wins_by_ko,&#xA;&#x9;&#x9;BlueWinsBySubmission AS wins_by_submission,&#xA;&#x9;&#x9;BlueWinsByTKODoctorStoppage AS wins_by_tko,&#xA;&#x9;&#x9;BMatchWCRank AS match_wc_rank,&#xA;&#x9;&#x9;BWFlyweightRank AS w_flyweight_rank,&#xA;&#x9;&#x9;BWFeatherweightRank AS w_featherweight_rank,&#xA;&#x9;&#x9;BWStrawweightRank AS w_srawweight_rank,&#xA;&#x9;&#x9;BWBantamweightRank AS w_bantamweight_rank,&#xA;&#x9;&#x9;BHeavyweightRank AS heavyweight_rank,&#xA;&#x9;&#x9;BLightHeavyweightRank AS light_heavyweight_rank,&#xA;&#x9;&#x9;BMiddleweightRank AS middleweight_rank,&#xA;&#x9;&#x9;BWelterweightRank AS welterweight_rank,&#xA;&#x9;&#x9;BLightweightRank AS lightweight_rank,&#xA;&#x9;&#x9;BFeatherweightRank AS featherweight_rank,&#xA;&#x9;&#x9;BBantamweightRank AS bantamweight_rank,&#xA;&#x9;&#x9;BFlyweightRank AS flyweight_rank,&#xA;&#x9;&#x9;BPFPRank AS pound_for_pound_rank,&#xA;&#x9;&#x9;[Date] AS last_updated&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;), AllDistinctFighters AS (&#xA;&#x9;SELECT DISTINCT&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;[weight],&#xA;&#x9;&#x9;gender,&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;wins,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;current_lose_streak,&#xA;&#x9;&#x9;current_win_sreak,&#xA;&#x9;&#x9;avg_sig_str_landed,&#xA;&#x9;&#x9;avg_sig_str_pct,&#xA;&#x9;&#x9;avg_sub_att,&#xA;&#x9;&#x9;avg_td_landed,&#xA;&#x9;&#x9;avg_td_pct,&#xA;&#x9;&#x9;longest_win_streak,&#xA;&#x9;&#x9;total_rounds_fought,&#xA;&#x9;&#x9;total_title_bouts,&#xA;&#x9;&#x9;wins_by_decision_majority,&#xA;&#x9;&#x9;wins_by_decision_split,&#xA;&#x9;&#x9;wins_by_decision_unanimous,&#xA;&#x9;&#x9;wins_by_ko,&#xA;&#x9;&#x9;wins_by_submission,&#xA;&#x9;&#x9;wins_by_tko,&#xA;&#x9;&#x9;match_wc_rank,&#xA;&#x9;&#x9;w_flyweight_rank,&#xA;&#x9;&#x9;w_featherweight_rank,&#xA;&#x9;&#x9;w_srawweight_rank,&#xA;&#x9;&#x9;w_bantamweight_rank,&#xA;&#x9;&#x9;heavyweight_rank,&#xA;&#x9;&#x9;light_heavyweight_rank,&#xA;&#x9;&#x9;middleweight_rank,&#xA;&#x9;&#x9;welterweight_rank,&#xA;&#x9;&#x9;lightweight_rank,&#xA;&#x9;&#x9;featherweight_rank,&#xA;&#x9;&#x9;bantamweight_rank,&#xA;&#x9;&#x9;flyweight_rank,&#xA;&#x9;&#x9;pound_for_pound_rank,&#xA;&#x9;&#x9;last_updated&#xA;&#x9;FROM&#xA;&#x9;&#x9;AllFighters&#xA;)&#xA;&#xA;UPDATE &#xA;&#x9;f&#xA;SET&#xA;&#x9;f.[name] = a.[name],&#xA;&#x9;f.[weight] = a.[weight],&#xA;&#x9;f.gender = a.gender,&#xA;&#x9;f.category = a.category,&#xA;&#x9;f.age = a.age,&#xA;&#x9;f.wins = a.wins,&#xA;&#x9;f.draws = a.draws,&#xA;&#x9;f.losses = a.losses,&#xA;&#x9;f.current_lose_streak = a.current_lose_streak,&#xA;&#x9;f.current_win_sreak = a.current_win_sreak,&#xA;&#x9;f.avg_sig_str_landed = a.avg_sig_str_landed,&#xA;&#x9;f.avg_sig_str_pct = a.avg_sig_str_pct,&#xA;&#x9;f.avg_sub_att = a.avg_sub_att,&#xA;&#x9;f.avg_td_landed = a.avg_td_landed,&#xA;&#x9;f.avg_td_pct = a.avg_td_pct,&#xA;&#x9;f.longest_win_streak = a.longest_win_streak,&#xA;&#x9;f.total_rounds_fought = a.total_rounds_fought,&#xA;&#x9;f.total_title_bouts = a.total_title_bouts,&#xA;&#x9;f.wins_by_decision_majority = a.wins_by_decision_majority,&#xA;&#x9;f.wins_by_decision_split = a.wins_by_decision_split,&#xA;&#x9;f.wins_by_decision_unanimous = a.wins_by_decision_unanimous,&#xA;&#x9;f.wins_by_ko = a.wins_by_ko,&#xA;&#x9;f.wins_by_submission = a.wins_by_submission,&#xA;&#x9;f.wins_by_tko = a.wins_by_tko,&#xA;&#x9;f.match_wc_rank = a.match_wc_rank,&#xA;&#x9;f.w_flyweight_rank = a.w_flyweight_rank,&#xA;&#x9;f.w_featherweight_rank = a.w_featherweight_rank,&#xA;&#x9;f.w_srawweight_rank = a.w_srawweight_rank,&#xA;&#x9;f.w_bantamweight_rank = a.light_heavyweight_rank,&#xA;&#x9;f.heavyweight_rank = a.light_heavyweight_rank,&#xA;&#x9;f.light_heavyweight_rank = a.light_heavyweight_rank,&#xA;&#x9;f.middleweight_rank = a.middleweight_rank,&#xA;&#x9;f.welterweight_rank = a.welterweight_rank,&#xA;&#x9;f.lightweight_rank = a.lightweight_rank,&#xA;&#x9;f.featherweight_rank = a.featherweight_rank,&#xA;&#x9;f.bantamweight_rank = a.bantamweight_rank,&#xA;&#x9;f.flyweight_rank = a.flyweight_rank,&#xA;&#x9;f.pound_for_pound_rank = a.pound_for_pound_rank,&#xA;&#x9;f.last_updated = a.last_updated&#xA;FROM&#xA;&#x9;Fighters f&#xA;&#x9;INNER JOIN [AllDistinctFighters] a ON a.fighter_alternate_id = f.fighter_alternate_id;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1270,7 +1397,7 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1D735DA-2CA6-4546-950B-4B1AA51A6161}"
           SQLTask:BypassPrepare="False"
-          SQLTask:SqlStatementSource="WITH ALLFighterAppearances AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_blue AS fighter_alternate_id,&#xA;&#x9;&#x9;BlueFighter AS [name],&#xA;&#x9;&#x9;[Date] AS MatchDate,&#xA;&#x9;&#x9;WeightClass AS category,&#xA;&#x9;&#x9;BlueAge AS age,&#xA;&#x9;&#x9;BlueDraws AS draws,&#xA;&#x9;&#x9;BlueLosses AS losses,&#xA;&#x9;&#x9;BlueWins AS wins,&#xA;&#x9;&#x9;'Blue' AS corner&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;&#xA;&#x9;UNION ALL&#xA;&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_red AS fighter_alternate_id,&#xA;&#x9;&#x9;RedFighter AS [name],&#xA;&#x9;&#x9;[Date] AS MatchDate,&#xA;&#x9;&#x9;WeightClass AS category,&#xA;&#x9;&#x9;RedAge AS age,&#xA;&#x9;&#x9;RedDraws AS draws,&#xA;&#x9;&#x9;RedLosses AS losses,&#xA;&#x9;&#x9;RedWins AS wins,&#xA;&#x9;&#x9;'Red' AS corner&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;), OrderedByDate AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;wins,&#xA;&#x9;&#x9;corner,&#xA;&#x9;&#x9;ROW_NUMBER() OVER (PARTITION BY fighter_alternate_id ORDER BY MatchDate DESC) AS AppearanceNo&#xA;&#x9;FROM&#xA;&#x9;&#x9;ALLFighterAppearances&#xA;), FighterData AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;wins&#xA;&#x9;FROM&#xA;&#x9;&#x9;OrderedByDate&#xA;&#x9;WHERE&#xA;&#x9;&#x9;AppearanceNo = 1&#xA;), MissingFighters AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;d.fighter_alternate_id,&#xA;&#x9;&#x9;d.[name],&#xA;&#x9;&#x9;d.category,&#xA;&#x9;&#x9;d.age,&#xA;&#x9;&#x9;d.draws,&#xA;&#x9;&#x9;d.losses,&#xA;&#x9;&#x9;d.wins&#xA;&#x9;FROM&#xA;&#x9;&#x9;FighterData d&#xA;&#x9;&#x9;LEFT JOIN Fighters f ON f.fighter_alternate_id = d.fighter_alternate_id&#xA;&#x9;WHERE&#xA;&#x9;&#x9;f.fighter_alternate_id IS NULL&#xA;)&#xA;&#xA;INSERT INTO Fighters (&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;wins&#xA;)&#xA;SELECT&#xA;&#x9;fighter_alternate_id,&#xA;&#x9;[name],&#xA;&#x9;category,&#xA;&#x9;age,&#xA;&#x9;draws,&#xA;&#x9;losses,&#xA;&#x9;wins&#xA;FROM&#xA;&#x9;MissingFighters;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="WITH ALLFighterAppearances AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_blue AS fighter_alternate_id,&#xA;&#x9;&#x9;BlueFighter AS [name],&#xA;&#x9;&#x9;BlueWeightLbs AS [weight],&#xA;&#x9;&#x9;WeightClass AS category,&#xA;&#x9;&#x9;BlueAge AS age,&#xA;&#x9;&#x9;BlueWins AS wins,&#xA;&#x9;&#x9;BlueDraws AS draws,&#xA;&#x9;&#x9;BlueLosses AS losses,&#xA;&#x9;&#x9;BlueCurrentLoseStreak AS current_lose_streak,&#xA;&#x9;&#x9;BlueCurrentWinStreak AS current_win_sreak,&#xA;&#x9;&#x9;BlueAvgSigStrLanded AS avg_sig_str_landed,&#xA;&#x9;&#x9;BlueAvgSigStrPct AS avg_sig_str_pct,&#xA;&#x9;&#x9;BlueAvgSubAtt AS avg_sub_att,&#xA;&#x9;&#x9;BlueAvgTDLanded AS avg_td_landed,&#xA;&#x9;&#x9;BlueAvgTDPct AS avg_td_pct,&#xA;&#x9;&#x9;BlueLongestWinStreak AS longest_win_streak,&#xA;&#x9;&#x9;BlueTotalRoundsFought AS total_rounds_fought,&#xA;&#x9;&#x9;BlueTotalTitleBouts AS total_title_bouts,&#xA;&#x9;&#x9;BlueWinsByDecisionMajority AS wins_by_decision_majority,&#xA;&#x9;&#x9;BlueWinsByDecisionSplit AS wins_by_decision_split,&#xA;&#x9;&#x9;BlueWinsByDecisionUnanimous AS wins_by_decision_unanimous,&#xA;&#x9;&#x9;BlueWinsByKO AS wins_by_ko,&#xA;&#x9;&#x9;BlueWinsBySubmission AS wins_by_submission,&#xA;&#x9;&#x9;BlueWinsByTKODoctorStoppage AS wins_by_tko,&#xA;&#x9;&#x9;BMatchWCRank AS match_wc_rank,&#xA;&#x9;&#x9;BWFlyweightRank AS w_flyweight_rank,&#xA;&#x9;&#x9;BWFeatherweightRank AS w_featherweight_rank,&#xA;&#x9;&#x9;BWStrawweightRank AS w_srawweight_rank,&#xA;&#x9;&#x9;BWBantamweightRank AS w_bantamweight_rank,&#xA;&#x9;&#x9;BHeavyweightRank AS heavyweight_rank,&#xA;&#x9;&#x9;BLightHeavyweightRank AS light_heavyweight_rank,&#xA;&#x9;&#x9;BMiddleweightRank AS middleweight_rank,&#xA;&#x9;&#x9;BWelterweightRank AS welterweight_rank,&#xA;&#x9;&#x9;BLightweightRank AS lightweight_rank,&#xA;&#x9;&#x9;BFeatherweightRank AS featherweight_rank,&#xA;&#x9;&#x9;BBantamweightRank AS bantamweight_rank,&#xA;&#x9;&#x9;BFlyweightRank AS flyweight_rank,&#xA;&#x9;&#x9;BPFPRank AS pound_for_pound_rank,&#xA;&#x9;&#x9;[Date] AS last_updated,&#xA;&#x9;&#x9;'Blue' AS corner,&#xA;&#x9;&#x9;[Date] AS MatchDate&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;&#xA;&#x9;UNION ALL&#xA;&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id_red AS fighter_alternate_id,&#xA;&#x9;&#x9;RedFighter AS [name],&#xA;&#x9;&#x9;RedWeightLbs AS [weight],&#xA;&#x9;&#x9;WeightClass AS category,&#xA;&#x9;&#x9;RedAge AS age,&#xA;&#x9;&#x9;RedWins AS wins,&#xA;&#x9;&#x9;RedDraws AS draws,&#xA;&#x9;&#x9;RedLosses AS losses,&#xA;&#x9;&#x9;RedCurrentLoseStreak AS current_lose_streak,&#xA;&#x9;&#x9;RedCurrentWinStreak AS current_win_sreak,&#xA;&#x9;&#x9;RedAvgSigStrLanded AS avg_sig_str_landed,&#xA;&#x9;&#x9;RedAvgSigStrPct AS avg_sig_str_pct,&#xA;&#x9;&#x9;RedAvgSubAtt AS avg_sub_att,&#xA;&#x9;&#x9;RedAvgTDLanded AS avg_td_landed,&#xA;&#x9;&#x9;RedAvgTDPct AS avg_td_pct,&#xA;&#x9;&#x9;RedLongestWinStreak AS longest_win_streak,&#xA;&#x9;&#x9;RedTotalRoundsFought AS total_rounds_fought,&#xA;&#x9;&#x9;RedTotalTitleBouts AS total_title_bouts,&#xA;&#x9;&#x9;RedWinsByDecisionMajority AS wins_by_decision_majority,&#xA;&#x9;&#x9;RedWinsByDecisionSplit AS wins_by_decision_split,&#xA;&#x9;&#x9;RedWinsByDecisionUnanimous AS wins_by_decision_unanimous,&#xA;&#x9;&#x9;RedWinsByKO AS wins_by_ko,&#xA;&#x9;&#x9;RedWinsBySubmission AS wins_by_submission,&#xA;&#x9;&#x9;RedWinsByTKODoctorStoppage AS wins_by_tko,&#xA;&#x9;&#x9;RMatchWCRank AS match_wc_rank,&#xA;&#x9;&#x9;RWFlyweightRank AS w_flyweight_rank,&#xA;&#x9;&#x9;RWFeatherweightRank AS w_featherweight_rank,&#xA;&#x9;&#x9;RWStrawweightRank AS w_srawweight_rank,&#xA;&#x9;&#x9;RWBantamweightRank AS w_bantamweight_rank,&#xA;&#x9;&#x9;RHeavyweightRank AS heavyweight_rank,&#xA;&#x9;&#x9;RLightHeavyweightRank AS light_heavyweight_rank,&#xA;&#x9;&#x9;RMiddleweightRank AS middleweight_rank,&#xA;&#x9;&#x9;RWelterweightRank AS welterweight_rank,&#xA;&#x9;&#x9;RLightweightRank AS lightweight_rank,&#xA;&#x9;&#x9;RFeatherweightRank AS featherweight_rank,&#xA;&#x9;&#x9;RBantamweightRank AS bantamweight_rank,&#xA;&#x9;&#x9;RFlyweightRank AS flyweight_rank,&#xA;&#x9;&#x9;RPFPRank AS pound_for_pound_rank,&#xA;&#x9;&#x9;[Date] AS last_updated,&#xA;&#x9;&#x9;'Red' AS corner,&#xA;&#x9;&#x9;[Date] AS MatchDate&#xA;&#x9;FROM&#xA;&#x9;&#x9;[UFC-Master]&#xA;), OrderedByDate AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;[weight],&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;wins,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;current_lose_streak,&#xA;&#x9;&#x9;current_win_sreak,&#xA;&#x9;&#x9;avg_sig_str_landed,&#xA;&#x9;&#x9;avg_sig_str_pct,&#xA;&#x9;&#x9;avg_sub_att,&#xA;&#x9;&#x9;avg_td_landed,&#xA;&#x9;&#x9;avg_td_pct,&#xA;&#x9;&#x9;longest_win_streak,&#xA;&#x9;&#x9;total_rounds_fought,&#xA;&#x9;&#x9;total_title_bouts,&#xA;&#x9;&#x9;wins_by_decision_majority,&#xA;&#x9;&#x9;wins_by_decision_split,&#xA;&#x9;&#x9;wins_by_decision_unanimous,&#xA;&#x9;&#x9;wins_by_ko,&#xA;&#x9;&#x9;wins_by_submission,&#xA;&#x9;&#x9;wins_by_tko,&#xA;&#x9;&#x9;match_wc_rank,&#xA;&#x9;&#x9;w_flyweight_rank,&#xA;&#x9;&#x9;w_featherweight_rank,&#xA;&#x9;&#x9;w_srawweight_rank,&#xA;&#x9;&#x9;w_bantamweight_rank,&#xA;&#x9;&#x9;heavyweight_rank,&#xA;&#x9;&#x9;light_heavyweight_rank,&#xA;&#x9;&#x9;middleweight_rank,&#xA;&#x9;&#x9;welterweight_rank,&#xA;&#x9;&#x9;lightweight_rank,&#xA;&#x9;&#x9;featherweight_rank,&#xA;&#x9;&#x9;bantamweight_rank,&#xA;&#x9;&#x9;flyweight_rank,&#xA;&#x9;&#x9;pound_for_pound_rank,&#xA;&#x9;&#x9;last_updated,&#xA;&#x9;&#x9;corner,&#xA;&#x9;&#x9;ROW_NUMBER() OVER (PARTITION BY fighter_alternate_id ORDER BY MatchDate DESC) AS AppearanceNo&#xA;&#x9;FROM&#xA;&#x9;&#x9;ALLFighterAppearances&#xA;), FighterData AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;[weight],&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;wins,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;current_lose_streak,&#xA;&#x9;&#x9;current_win_sreak,&#xA;&#x9;&#x9;avg_sig_str_landed,&#xA;&#x9;&#x9;avg_sig_str_pct,&#xA;&#x9;&#x9;avg_sub_att,&#xA;&#x9;&#x9;avg_td_landed,&#xA;&#x9;&#x9;avg_td_pct,&#xA;&#x9;&#x9;longest_win_streak,&#xA;&#x9;&#x9;total_rounds_fought,&#xA;&#x9;&#x9;total_title_bouts,&#xA;&#x9;&#x9;wins_by_decision_majority,&#xA;&#x9;&#x9;wins_by_decision_split,&#xA;&#x9;&#x9;wins_by_decision_unanimous,&#xA;&#x9;&#x9;wins_by_ko,&#xA;&#x9;&#x9;wins_by_submission,&#xA;&#x9;&#x9;wins_by_tko,&#xA;&#x9;&#x9;match_wc_rank,&#xA;&#x9;&#x9;w_flyweight_rank,&#xA;&#x9;&#x9;w_featherweight_rank,&#xA;&#x9;&#x9;w_srawweight_rank,&#xA;&#x9;&#x9;w_bantamweight_rank,&#xA;&#x9;&#x9;heavyweight_rank,&#xA;&#x9;&#x9;light_heavyweight_rank,&#xA;&#x9;&#x9;middleweight_rank,&#xA;&#x9;&#x9;welterweight_rank,&#xA;&#x9;&#x9;lightweight_rank,&#xA;&#x9;&#x9;featherweight_rank,&#xA;&#x9;&#x9;bantamweight_rank,&#xA;&#x9;&#x9;flyweight_rank,&#xA;&#x9;&#x9;pound_for_pound_rank,&#xA;&#x9;&#x9;last_updated&#xA;&#x9;FROM&#xA;&#x9;&#x9;OrderedByDate&#xA;&#x9;WHERE&#xA;&#x9;&#x9;AppearanceNo = 1&#xA;), MissingFighters AS (&#xA;&#x9;SELECT&#xA;&#x9;&#x9;d.fighter_alternate_id,&#xA;&#x9;&#x9;d.[name],&#xA;&#x9;&#x9;d.[weight],&#xA;&#x9;&#x9;d.category,&#xA;&#x9;&#x9;d.age,&#xA;&#x9;&#x9;d.wins,&#xA;&#x9;&#x9;d.draws,&#xA;&#x9;&#x9;d.losses,&#xA;&#x9;&#x9;d.current_lose_streak,&#xA;&#x9;&#x9;d.current_win_sreak,&#xA;&#x9;&#x9;d.avg_sig_str_landed,&#xA;&#x9;&#x9;d.avg_sig_str_pct,&#xA;&#x9;&#x9;d.avg_sub_att,&#xA;&#x9;&#x9;d.avg_td_landed,&#xA;&#x9;&#x9;d.avg_td_pct,&#xA;&#x9;&#x9;d.longest_win_streak,&#xA;&#x9;&#x9;d.total_rounds_fought,&#xA;&#x9;&#x9;d.total_title_bouts,&#xA;&#x9;&#x9;d.wins_by_decision_majority,&#xA;&#x9;&#x9;d.wins_by_decision_split,&#xA;&#x9;&#x9;d.wins_by_decision_unanimous,&#xA;&#x9;&#x9;d.wins_by_ko,&#xA;&#x9;&#x9;d.wins_by_submission,&#xA;&#x9;&#x9;d.wins_by_tko,&#xA;&#x9;&#x9;d.match_wc_rank,&#xA;&#x9;&#x9;d.w_flyweight_rank,&#xA;&#x9;&#x9;d.w_featherweight_rank,&#xA;&#x9;&#x9;d.w_srawweight_rank,&#xA;&#x9;&#x9;d.w_bantamweight_rank,&#xA;&#x9;&#x9;d.heavyweight_rank,&#xA;&#x9;&#x9;d.light_heavyweight_rank,&#xA;&#x9;&#x9;d.middleweight_rank,&#xA;&#x9;&#x9;d.welterweight_rank,&#xA;&#x9;&#x9;d.lightweight_rank,&#xA;&#x9;&#x9;d.featherweight_rank,&#xA;&#x9;&#x9;d.bantamweight_rank,&#xA;&#x9;&#x9;d.flyweight_rank,&#xA;&#x9;&#x9;d.pound_for_pound_rank,&#xA;&#x9;&#x9;d.last_updated&#xA;&#x9;FROM&#xA;&#x9;&#x9;FighterData d&#xA;&#x9;&#x9;LEFT JOIN Fighters f ON f.fighter_alternate_id = d.fighter_alternate_id&#xA;&#x9;WHERE&#xA;&#x9;&#x9;f.fighter_alternate_id IS NULL&#xA;)&#xA;&#xA;INSERT INTO Fighters (&#xA;&#x9;&#x9;fighter_alternate_id,&#xA;&#x9;&#x9;[name],&#xA;&#x9;&#x9;[weight],&#xA;&#x9;&#x9;category,&#xA;&#x9;&#x9;age,&#xA;&#x9;&#x9;wins,&#xA;&#x9;&#x9;draws,&#xA;&#x9;&#x9;losses,&#xA;&#x9;&#x9;current_lose_streak,&#xA;&#x9;&#x9;current_win_sreak,&#xA;&#x9;&#x9;avg_sig_str_landed,&#xA;&#x9;&#x9;avg_sig_str_pct,&#xA;&#x9;&#x9;avg_sub_att,&#xA;&#x9;&#x9;avg_td_landed,&#xA;&#x9;&#x9;avg_td_pct,&#xA;&#x9;&#x9;longest_win_streak,&#xA;&#x9;&#x9;total_rounds_fought,&#xA;&#x9;&#x9;total_title_bouts,&#xA;&#x9;&#x9;wins_by_decision_majority,&#xA;&#x9;&#x9;wins_by_decision_split,&#xA;&#x9;&#x9;wins_by_decision_unanimous,&#xA;&#x9;&#x9;wins_by_ko,&#xA;&#x9;&#x9;wins_by_submission,&#xA;&#x9;&#x9;wins_by_tko,&#xA;&#x9;&#x9;match_wc_rank,&#xA;&#x9;&#x9;w_flyweight_rank,&#xA;&#x9;&#x9;w_featherweight_rank,&#xA;&#x9;&#x9;w_srawweight_rank,&#xA;&#x9;&#x9;w_bantamweight_rank,&#xA;&#x9;&#x9;heavyweight_rank,&#xA;&#x9;&#x9;light_heavyweight_rank,&#xA;&#x9;&#x9;middleweight_rank,&#xA;&#x9;&#x9;welterweight_rank,&#xA;&#x9;&#x9;lightweight_rank,&#xA;&#x9;&#x9;featherweight_rank,&#xA;&#x9;&#x9;bantamweight_rank,&#xA;&#x9;&#x9;flyweight_rank,&#xA;&#x9;&#x9;pound_for_pound_rank,&#xA;&#x9;&#x9;last_updated&#xA;)&#xA;SELECT&#xA;&#x9;fighter_alternate_id,&#xA;&#x9;[name],&#xA;&#x9;[weight],&#xA;&#x9;category,&#xA;&#x9;age,&#xA;&#x9;wins,&#xA;&#x9;draws,&#xA;&#x9;losses,&#xA;&#x9;current_lose_streak,&#xA;&#x9;current_win_sreak,&#xA;&#x9;avg_sig_str_landed,&#xA;&#x9;avg_sig_str_pct,&#xA;&#x9;avg_sub_att,&#xA;&#x9;avg_td_landed,&#xA;&#x9;avg_td_pct,&#xA;&#x9;longest_win_streak,&#xA;&#x9;total_rounds_fought,&#xA;&#x9;total_title_bouts,&#xA;&#x9;wins_by_decision_majority,&#xA;&#x9;wins_by_decision_split,&#xA;&#x9;wins_by_decision_unanimous,&#xA;&#x9;wins_by_ko,&#xA;&#x9;wins_by_submission,&#xA;&#x9;wins_by_tko,&#xA;&#x9;match_wc_rank,&#xA;&#x9;w_flyweight_rank,&#xA;&#x9;w_featherweight_rank,&#xA;&#x9;w_srawweight_rank,&#xA;&#x9;w_bantamweight_rank,&#xA;&#x9;heavyweight_rank,&#xA;&#x9;light_heavyweight_rank,&#xA;&#x9;middleweight_rank,&#xA;&#x9;welterweight_rank,&#xA;&#x9;lightweight_rank,&#xA;&#x9;featherweight_rank,&#xA;&#x9;bantamweight_rank,&#xA;&#x9;flyweight_rank,&#xA;&#x9;pound_for_pound_rank,&#xA;&#x9;last_updated&#xA;FROM&#xA;&#x9;MissingFighters;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1415,7 +1542,7 @@
                       refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].Columns[Country]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="200"
+                      cachedLength="100"
                       cachedName="Country"
                       externalMetadataColumnId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[Country]"
                       lineageId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].Columns[Country]" />
@@ -2097,6 +2224,30 @@
                       cachedName="RedReachCms"
                       externalMetadataColumnId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[RedReachCms]"
                       lineageId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].Columns[RedReachCms]" />
+                    <inputColumn
+                      refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].Columns[RedFighter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="RedFighter"
+                      externalMetadataColumnId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[RedFighter]"
+                      lineageId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].Columns[RedFighter]" />
+                    <inputColumn
+                      refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].Columns[BlueFighter]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="BlueFighter"
+                      externalMetadataColumnId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[BlueFighter]"
+                      lineageId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].Columns[BlueFighter]" />
+                    <inputColumn
+                      refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].Columns[Gender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gender]"
+                      lineageId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].Columns[Gender]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2600,6 +2751,24 @@
                       refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[RedReachCms]"
                       dataType="r4"
                       name="RedReachCms" />
+                    <externalMetadataColumn
+                      refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[RedFighter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="RedFighter" />
+                    <externalMetadataColumn
+                      refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[BlueFighter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="BlueFighter" />
+                    <externalMetadataColumn
+                      refId="Package\UFC-Master Load\UFC-Master Table.Inputs[Entrada de destino de OLE DB].ExternalColumns[Gender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="Gender" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2830,7 +2999,7 @@
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="RedirectRow"
                       externalMetadataColumnId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].ExternalColumns[Country]"
-                      length="200"
+                      length="100"
                       lineageId="Package\UFC-Master Load\ufc-master_processed CSV.Outputs[Salida de origen de archivo plano].Columns[Country]"
                       name="Country"
                       truncationRowDisposition="RedirectRow">
@@ -5841,12 +6010,12 @@
       DTS:From="Package\Transfer missing fighter data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Transfer gender data" />
+      DTS:To="Package\Transfer data" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
       DTS:DTSID="{92E703B0-27FF-41FF-917B-6B812C111AF4}"
-      DTS:From="Package\Transfer gender data"
+      DTS:From="Package\Transfer data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
       DTS:To="Package\Clear Fighters_Fights Table" />
@@ -5918,7 +6087,7 @@
       DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
       DTS:CreationName=""
       DTS:DTSID="{51F8FA64-C4CF-45A3-968A-10297C327695}"
-      DTS:From="Package\Transfer gender data"
+      DTS:From="Package\Transfer data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 8"
       DTS:To="Package\Remove redundant columns from UFC-Master" />
@@ -5944,18 +6113,6 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="143,42"
-          Id="Package\Fighters Load"
-          TopLeft="546,201.5" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\UFC-Master Load"
-          TopLeft="86.75,203.5" />
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Clear UFC-Master Table"
-          TopLeft="191.25,47.5" />
-        <NodeLayout
           Size="173,42"
           Id="Package\Clear Fighters Table"
           TopLeft="404,47.5" />
@@ -5964,71 +6121,59 @@
           Id="Package\Clear Fighters_Fights Table"
           TopLeft="418.611111111111,369" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\Transfer gender data"
-          TopLeft="295,272" />
+          Size="190,42"
+          Id="Package\Clear UFC-Master Table"
+          TopLeft="191.25,47.5" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Create Fighters Table"
+          TopLeft="404,116" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Create Fighters_Fights Table"
+          TopLeft="420,443" />
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Create UFC-Master Table"
+          TopLeft="184,114" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Fighters Load"
+          TopLeft="546,201.5" />
+        <NodeLayout
+          Size="195,42"
+          Id="Package\Populate Fighters_Fights"
+          TopLeft="157,439" />
+        <NodeLayout
+          Size="294,42"
+          Id="Package\Remove redundant columns from UFC-Master"
+          TopLeft="102,367" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Transfer data"
+          TopLeft="317,271" />
         <NodeLayout
           Size="215,42"
           Id="Package\Transfer missing fighter data"
           TopLeft="280,203" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="245.75,224.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="34.25,0"
-              Start="0,0"
-              End="26.75,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="26.75,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 6]"
-          TopLeft="546,223.25">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51,0"
-              Start="0,0"
-              End="-43.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-43.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\UFC-Master Load"
+          TopLeft="86.75,203.5" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="385.75,245">
+          TopLeft="387.75,245">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27"
+              EndConnector="0,26"
               Start="0,0"
-              End="0,19.5">
+              End="0,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6039,172 +6184,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="412.333333333333,314">
+          TopLeft="410.333333333333,313">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="109.777777777778,55"
+              EndConnector="111.777777777778,56"
               Start="0,0"
-              End="109.777777777778,47.5">
+              End="111.777777777778,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.2939866369711" />
+                    End="0,18.7743732590529" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,18.2939866369711"
-                    Point2="0,22.2939866369711"
-                    Point3="4,22.2939866369711" />
+                    Point1="0,18.7743732590529"
+                    Point2="0,22.7743732590529"
+                    Point3="4,22.7743732590529" />
                   <mssgle:LineSegment
-                    End="105.777777777778,22.2939866369711" />
+                    End="107.777777777778,22.7743732590529" />
                   <mssgle:CubicBezierSegment
-                    Point1="105.777777777778,22.2939866369711"
-                    Point2="109.777777777778,22.2939866369711"
-                    Point3="109.777777777778,26.2939866369711" />
+                    Point1="107.777777777778,22.7743732590529"
+                    Point2="111.777777777778,22.7743732590529"
+                    Point3="111.777777777778,26.7743732590529" />
                   <mssgle:LineSegment
-                    End="109.777777777778,47.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Create Fighters_Fights Table"
-          TopLeft="420,443" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="524.555555555556,411">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32"
-              Start="0,0"
-              End="0,24.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="195,42"
-          Id="Package\Populate Fighters_Fights"
-          TopLeft="157,439" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="420,462">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-68,0"
-              Start="0,0"
-              End="-60.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-60.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="294,42"
-          Id="Package\Remove redundant columns from UFC-Master"
-          TopLeft="102,367" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="355.666666666667,314">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-106.666666666667,53"
-              Start="0,0"
-              End="-106.666666666667,45.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.4832962138085" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.4832962138085"
-                    Point2="0,21.4832962138085"
-                    Point3="-4,21.4832962138085" />
-                  <mssgle:LineSegment
-                    End="-102.666666666667,21.4832962138085" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-102.666666666667,21.4832962138085"
-                    Point2="-106.666666666667,21.4832962138085"
-                    Point3="-106.666666666667,25.4832962138085" />
-                  <mssgle:LineSegment
-                    End="-106.666666666667,45.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="251.75,409">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30"
-              Start="0,0"
-              End="0,22.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="197,42"
-          Id="Package\Create UFC-Master Table"
-          TopLeft="184,114" />
-        <NodeLayout
-          Size="180,42"
-          Id="Package\Create Fighters Table"
-          TopLeft="404,116" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="284.375,89.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.5"
-              Start="0,0"
-              End="0,17">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17" />
+                    End="111.777777777778,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6248,28 +6251,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="492.25,89.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.5"
-              Start="0,0"
-              End="0,19">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
           TopLeft="494,158">
           <EdgeLayout.Curve>
@@ -6303,6 +6284,194 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="284.375,89.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.5"
+              Start="0,0"
+              End="0,17">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="492.25,89.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.5"
+              Start="0,0"
+              End="0,19">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="245.75,224.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.25,0"
+              Start="0,0"
+              End="26.75,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.75,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="524.555555555556,411">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="546,223.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-51,0"
+              Start="0,0"
+              End="-43.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-43.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="420,462">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-68,0"
+              Start="0,0"
+              End="-60.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-60.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="365.666666666667,313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116.666666666667,54"
+              Start="0,0"
+              End="-116.666666666667,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.9610027855153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.9610027855153"
+                    Point2="0,21.9610027855153"
+                    Point3="-4,21.9610027855153" />
+                  <mssgle:LineSegment
+                    End="-112.666666666667,21.9610027855153" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-112.666666666667,21.9610027855153"
+                    Point2="-116.666666666667,21.9610027855153"
+                    Point3="-116.666666666667,25.9610027855153" />
+                  <mssgle:LineSegment
+                    End="-116.666666666667,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="251.75,409">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -6322,21 +6491,21 @@
         <NodeLayout
           Size="137,42"
           Id="Package\Fighters Load\fighters CSV"
-          TopLeft="235,29" />
+          TopLeft="238,28" />
         <EdgeLayout
           Id="Package\Fighters Load.Paths[Salida de origen de archivo plano]"
-          TopLeft="306.25,71">
+          TopLeft="307.75,70">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,85"
+              EndConnector="0,86"
               Start="0,0"
-              End="0,77.5">
+              End="0,78.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,77.5" />
+                    End="0,78.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6347,25 +6516,25 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fighters Load.Paths[Salida de error de origen de archivo plano]"
-          TopLeft="372,50">
+          TopLeft="375,49.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="156,0"
+              EndConnector="153,0"
               Start="0,0"
-              End="148.5,0">
+              End="145.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="148.5,0" />
+                    End="145.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-19.1526953125,5,186.805390625,11.6630859375"
+              BoundingBox="-20.6526953125,5,186.805390625,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -6408,6 +6577,10 @@
           Id="Package\UFC-Master Load\ufc-master_processed CSV"
           TopLeft="95,40" />
         <NodeLayout
+          Size="163,42"
+          Id="Package\UFC-Master Load\UFC-Master Table"
+          TopLeft="108,152" />
+        <NodeLayout
           Size="214,42"
           Id="Package\UFC-Master Load\ufc-master_processed Errors"
           TopLeft="434,36" />
@@ -6435,10 +6608,6 @@
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\UFC-Master Load\UFC-Master Table"
-          TopLeft="108,152" />
         <EdgeLayout
           Id="Package\UFC-Master Load.Paths[Salida de origen de archivo plano]"
           TopLeft="193.25,82">
@@ -6458,7 +6627,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
