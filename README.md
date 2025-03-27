@@ -13,4 +13,4 @@ Any suggestions on improvements are welcome, but only on already "feature-comple
 
 KNOWN ISSUES
 
-* very new fighters might not have all of their data if they haven't been added to either of the source data
+* very new fighters might not have all of their data if they haven't been added to either of the data sources
