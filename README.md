@@ -13,6 +13,4 @@ Any suggestions on improvements are welcome, but only on already "feature-comple
 
 KNOWN ISSUES
 
-* There's duplicated fighters in the Fighters table. This is because they come from the fighters source with their name and surname flipped in the fighter_alternate_id.
-
-* There are fighters that are missing their gender. Partially related to the previous issue.
+* very new fighters might not have all of their data if they haven't been added to either of the source data
