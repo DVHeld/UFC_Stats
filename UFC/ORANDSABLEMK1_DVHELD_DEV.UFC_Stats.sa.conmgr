@@ -8,7 +8,7 @@
       DTS:ConnectionString="Data Source=ORANDSABLEMK1\DVHELD_DEV;User ID=sa;Initial Catalog=UFC_Stats;Persist Security Info=True;Application Name=SSIS-UFC-{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAO5mAGb+yU6X2osQ7aRtkAAAAAACAAAAAAAQZgAAAAEAACAAAACmXtBtjpxspJMUuRt6pNLAW1Mb6qvjiPQPHQmJtcOC3QAAAAAOgAAAAAIAACAAAABaruKL4DnpxKL31YzkLWYQgpABXeZM++IsnFPjBTwfI4AAAAD6lJAwh8aZZa551fDrFTXKMbMEomg1GXnxtf0qs1n4mxugDldKCu6iSS6f951710z/7MiU9oljfu8X4Xk0AlBgPdyqFYnsGq5I9EAsJ7Rt5/67Tgz6GCn9Ogm2/rS1+ScMoqW4yO8gCd+tib+Sz8HMPGdVRk7+miNB/7pPXS1J9UAAAAAekGShdjKQMuB3vO9uIUZt7CTxCj6o1LK76ZR1OUU/Rs9F2iJ2cnoStKEalAWOEcMG/Pj30GVDMVjRZseYnTHz</DTS:Password>
+        Sensitive="1"></DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

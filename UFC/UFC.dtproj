@@ -12,11 +12,11 @@
   <DataSourceViews />
   <DeploymentModelSpecificContent>
     <Manifest>
-      <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
+      <SSIS:Project SSIS:ProtectionLevel="DontSaveSensitive" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{39c32f0b-8371-4547-b38f-262d9925f692}</SSIS:Property>
           <SSIS:Property SSIS:Name="Name">UFC</SSIS:Property>
-          <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+          <SSIS:Property SSIS:Name="VersionMajor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionComments">
@@ -26,7 +26,6 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ORANDSABLEMK1</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAO5mAGb+yU6X2osQ7aRtkAAAAAACAAAAAAAQZgAAAAEAACAAAAAwI3RJlwD5IgUZHNQpH8oN8kK8ejX5mKbKmpIv2AXidgAAAAAOgAAAAAIAACAAAADY2Symbh2KfgFnP/xDmoCSno0qXXv2Lm0fwpMpOsfX75AAAACspGiOVkpUkwqyNP6Q3n2sDMsWkWxf/C6fNcCW7/0UuhajQOrs+wi68IH+K6CkgYPh3K3q/jGP2lajyICvHBOh6CwG6xgWQfE0WprrBAj/bfVdLdJdaKDuRQbBdKiXZSwdUQz/ZrDDPm6yWWB2wu1F2aimaXG5qNDlyZ9zXn1zyf7EaEB3L7rfmYfGcT/2bEZAAAAAYHZMufyeiuP13b31vcz7Oho/rcYHOP60qktWYWeTHJWRcsv5wVuURXwm7PjvXtIvQ13XkmuMG9iyDtMrPcds+w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -320,6 +319,8 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">
+                </SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -515,6 +516,8 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">
+                </SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -556,14 +559,14 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">52</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">237</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{26755E1F-FBB3-4823-B893-9D9205B76B78}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{23095CAD-0120-43D6-B287-3A1A95CA0446}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
                 <SSIS:Parameter SSIS:Name="CM.ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa1.ConnectByProxy">
