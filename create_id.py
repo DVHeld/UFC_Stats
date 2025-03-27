@@ -6,10 +6,10 @@ from unicodedata import normalize, combining
 from string import ascii_letters
 
 def _remove_accents(text: str) -> str:
-    return ''.join([char for char in normalize('NFKD', text) if not combining(char)])
+    return ''.join([char for char in normalize('NFKD', text.replace('ł', 'l')) if not combining(char)])
 
 def _cleanup(text: str) -> str:
-    allowed_characters = ascii_letters + '-'
+    allowed_characters = ascii_letters + '-_'
     translation_table = {ord(char): None for char in ''.join(set(text)) if char not in allowed_characters}
     return text.translate(translation_table)
 
@@ -34,23 +34,19 @@ def create_fight_id() -> bool:
             fight_id = 0
             for row in downloaded_data:
                 # Create new fight_id, red and blue fighter_alternate_id
-                record = str(fight_id) + ";" + row[6].replace("-", "") + "-" +\
-                         _remove_accents(row[0]).lower().replace(" ", "_") + "-" +\
-                         _remove_accents(row[1]).lower().replace(" ", "_")
-                record += ";" + _cleanup(_remove_accents(row[0]).lower().replace(" ", "-"))
-                record += ";" + _cleanup(_remove_accents(row[1]).lower().replace(" ", "-"))
+                record = str(fight_id) + ";" + row[6].strip().replace("-", "") + "-" +\
+                         _cleanup(_remove_accents(row[0].strip()).lower().replace(" ", "_")) + "-" +\
+                         _cleanup(_remove_accents(row[1].strip()).lower().replace(" ", "_"))
+                record += ";" + _cleanup(_remove_accents(row[0].strip()).lower().replace(" ", "-"))
+                record += ";" + _cleanup(_remove_accents(row[1].strip()).lower().replace(" ", "-"))
                 for stat in row:
-                    normalized_stat = _remove_accents(stat).replace(".", ",")
+                    normalized_stat = _remove_accents(stat.strip()).replace(".", ",")
                     if normalized_stat == "Wrestler":
                         normalized_stat = "Wrestling"
                     elif normalized_stat == "Kickboxer":
                         normalized_stat = "Kickboxing"
                     elif normalized_stat == "Boxer":
                         normalized_stat = "Boxing"
-                    elif normalized_stat == "":
-                        normalized_stat = "N/E"
-                    elif normalized_stat == "NULL":
-                        normalized_stat = "N/E"
                     elif normalized_stat == "Brawler":
                         normalized_stat = "Brawling"
                     elif normalized_stat == "Grappler":
