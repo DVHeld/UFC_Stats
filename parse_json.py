@@ -49,7 +49,9 @@ def parse_fighters() -> bool:
                 if stat == 'category':
                     record += ';' + _remove_accents(value.strip()).replace(' Division', '')
                 elif stat == 'name':
-                    fighter_alternate_id = _cleanup(_remove_accents(value.strip()).lower().replace(' ', '-'))
+                    fighter_alternate_id = _cleanup(
+                                           _remove_accents(value.strip()).lower().replace(' ', '-')
+                                           )
                     record += ';' + _remove_accents(value.strip())
                 else:
                     record += ';' + _remove_accents(value.strip())
