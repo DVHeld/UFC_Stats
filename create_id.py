@@ -40,7 +40,7 @@ def create_fight_id() -> bool:
                 record += ";" + _cleanup(_remove_accents(row[0].strip()).lower().replace(" ", "-"))
                 record += ";" + _cleanup(_remove_accents(row[1].strip()).lower().replace(" ", "-"))
                 for stat in row:
-                    normalized_stat = _remove_accents(stat.strip()).replace(".", ",")
+                    normalized_stat = _remove_accents(stat.strip()) #.replace(".", ",")
                     if normalized_stat == "Wrestler":
                         normalized_stat = "Wrestling"
                     elif normalized_stat == "Kickboxer":
