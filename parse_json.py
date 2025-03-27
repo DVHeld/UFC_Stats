@@ -6,10 +6,10 @@ from unicodedata import normalize, combining
 from string import ascii_letters
 
 def _remove_accents(text: str) -> str:
-    return ''.join([char for char in normalize('NFKD', text) if not combining(char)])
+    return ''.join([char for char in normalize('NFKD', text.replace('ł', 'l')) if not combining(char)])
 
 def _cleanup(text: str) -> str:
-    allowed_characters = ascii_letters + '-'
+    allowed_characters = ascii_letters + '-_'
     translation_table = {ord(char): None for char in ''.join(set(text)) if char not in allowed_characters}
     return text.translate(translation_table)
 
@@ -29,8 +29,6 @@ def parse_fighters() -> bool:
         header_names = []
         for column_header in list(downloaded_data.values())[0].keys():
             header_names.append(column_header)
-
-        fighter_id = len(output_file.readlines())
         output_file.seek(0)
 
         # Adding column headers to newly created file
@@ -42,19 +40,20 @@ def parse_fighters() -> bool:
         # Write each fighter's data into the output file
         for fighter_alternate_id, fighter_data in downloaded_data.items():
             position = 0
-            record = str(fighter_id) + ';' + _cleanup(fighter_alternate_id)
-
-            # Synch for empty data
+            record = ''
             for stat, value in fighter_data.items():
+                # Synch for empty data
                 while stat != header_names[position]:
                     record += ';'
                     position += 1
                 if stat == 'category':
-                    record += ';' + _remove_accents(value).replace(' Division', '')
+                    record += ';' + _remove_accents(value.strip()).replace(' Division', '')
+                elif stat == 'name':
+                    fighter_alternate_id = _cleanup(_remove_accents(value.strip()).lower().replace(' ', '-'))
+                    record += ';' + _remove_accents(value.strip())
                 else:
-                    record += ';' + _remove_accents(value)
+                    record += ';' + _remove_accents(value.strip())
                 position += 1
-
+            record = ';' + fighter_alternate_id + record
             output_file.write(record + '\n')
-            fighter_id += 1
     return True
