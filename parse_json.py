@@ -53,6 +53,8 @@ def parse_fighters() -> bool:
                                            _remove_accents(value.strip()).lower().replace(' ', '-')
                                            )
                     record += ';' + _remove_accents(value.strip())
+                elif stat in ('height', 'reach', 'legReach'):
+                    record += ';' + str(float(value.strip()) * 2.54) # Convert to cm
                 else:
                     record += ';' + _remove_accents(value.strip())
                 position += 1
