@@ -2,6 +2,10 @@
 
 This is just a personal project. The goal here is just to learn and practice various tools and languages (which is why I might be doing things using "the wrong tools"), all the while making some hopefully cool and insightful vizualisations in Power BI and Excel PowerPivot.
 
+![Tale of the Tape](https://github.com/DVHeld/UFC_Stats/blob/main/img/Tale_of_the_Tape_01.png?raw=true)
+![Tale of the Tape](https://github.com/DVHeld/UFC_Stats/blob/main/img/Tale_of_the_Tape_02.png?raw=true)
+![Tale of the Tape](https://github.com/DVHeld/UFC_Stats/blob/main/img/Tale_of_the_Tape_03.png?raw=true)
+
 The sources for the raw data are:
 
 * fighters.json: https://github.com/victor-lillo/octagon-api/
