@@ -61,3 +61,4 @@ def parse_fighters() -> bool:
             record = ';' + fighter_alternate_id + record
             output_file.write(record + '\n')
     return True
+

@@ -145,43 +145,50 @@ def create_fight_id() -> bool:
     """
 
     file_path = Path(__file__).parent / 'data' / 'ufc-master.csv'
-    with open(file_path, "r", encoding="utf-8") as input_file:
+    with open(file_path, 'r', encoding='utf-8') as input_file:
         downloaded_data = reader(input_file, quotechar='"', delimiter=',')
         file_path = Path(__file__).parent / 'data' / 'ufc-master_processed.csv'
         
-        with open(file_path, "w+", encoding='utf-8-sig', newline='') as output_file:
-            column_headers = "fight_id;fight_alternate_id;fighter_alternate_id_red;fighter_alternate_id_blue"
+        with open(file_path, 'w+', encoding='utf-8-sig', newline='') as output_file:
+            column_headers = 'fight_id;fight_alternate_id;fighter_alternate_id_red;fighter_alternate_id_blue'
             for header_name in next(downloaded_data):
-                column_headers += ";" + header_name
-            output_file.write(column_headers + "\n")
+                column_headers += ';' + header_name
+            output_file.write(column_headers + '\n')
 
             fight_id = 0
             for row in downloaded_data:
                 # Create new fight_id, red and blue fighter_alternate_id
-                record = str(fight_id) + ";" + row[6].strip().replace("-", "") + "-" +\
-                         _cleanup(_remove_accents(row[0].strip()).lower().replace(" ", "_")) + "-" +\
-                         _cleanup(_remove_accents(row[1].strip()).lower().replace(" ", "_"))
-                record += ";" + _cleanup(_remove_accents(row[0].strip()).lower().replace(" ", "-"))
-                record += ";" + _cleanup(_remove_accents(row[1].strip()).lower().replace(" ", "-"))
+                record = str(fight_id) + ';' + row[6].strip().replace('-', '') + '-' +\
+                         _cleanup(_remove_accents(row[0].strip()).lower().replace(' ', '_')) + '-' +\
+                         _cleanup(_remove_accents(row[1].strip()).lower().replace(' ', '_'))
+                record += ';' + _cleanup(_remove_accents(row[0].strip()).lower().replace(' ', '-'))
+                record += ';' + _cleanup(_remove_accents(row[1].strip()).lower().replace(' ', '-'))
                 for stat_no, stat in enumerate(row):
-                    normalized_stat = _remove_accents(stat.strip()) #.replace(".", ",")
+                    normalized_stat = _remove_accents(stat.strip()) #.replace('.', ',')
                     if STAT_NAMES[stat_no] in ('RedStance', 'BlueStance'):
-                        if normalized_stat == "Wrestler":
-                            normalized_stat = "Wrestling"
-                        elif normalized_stat == "Kickboxer":
-                            normalized_stat = "Kickboxing"
-                        elif normalized_stat == "Boxer":
-                            normalized_stat = "Boxing"
-                        elif normalized_stat == "Brawler":
-                            normalized_stat = "Brawling"
-                        elif normalized_stat == "Grappler":
-                            normalized_stat = "Grappling"
-                        elif normalized_stat == "Striker":
-                            normalized_stat = "Striking"
+                        if normalized_stat == 'Wrestler':
+                            normalized_stat = 'Wrestling'
+                        elif normalized_stat == 'Kickboxer':
+                            normalized_stat = 'Kickboxing'
+                        elif normalized_stat == 'Boxer':
+                            normalized_stat = 'Boxing'
+                        elif normalized_stat == 'Brawler':
+                            normalized_stat = 'Brawling'
+                        elif normalized_stat == 'Grappler':
+                            normalized_stat = 'Grappling'
+                        elif normalized_stat == 'Striker':
+                            normalized_stat = 'Striking'
                     elif stat_no in range(78, 106):
                         if normalized_stat == '':
                             normalized_stat = '16'
-                    record += ";" + normalized_stat
-                output_file.write(record + "\n")
+                    elif STAT_NAMES[stat_no] == 'Country':
+                        if normalized_stat == 'USA':
+                            normalized_stat = 'United States'
+                        elif normalized_stat == 'England': # Necessary?
+                            normalized_stat = 'United Kingdom'
+                        
+                    record += ';' + normalized_stat
+                output_file.write(record + '\n')
                 fight_id += 1
     return True
+
