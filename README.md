@@ -10,6 +10,7 @@ The sources for the raw data are:
 
 * fighters.json: https://github.com/victor-lillo/octagon-api/
 * ufc-master.csv: https://www.kaggle.com/datasets/mdabbert/ultimate-ufc-dataset/data?select=ufc-master.csv
+* flags.csv: https://www.kaggle.com/datasets/zhongtr0n/country-flag-urls
 
 I process the fighters.json data using simple Python to convert it into a CSV that includes a fighter_id field. The ufc-master.csv is also missing a unique fight_id which I create in a SSIS task. An extra intermediary table is also created to transform a many-to-many connection in the data model into one-to-many connections. The data is then loaded into a SQL Server database, from which it's consumed by the Power BI and Excel PowerPivot reports. At least that's the plan.
 
