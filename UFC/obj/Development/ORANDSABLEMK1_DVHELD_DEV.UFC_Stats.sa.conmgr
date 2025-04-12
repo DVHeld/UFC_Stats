@@ -5,10 +5,13 @@
   DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=ORANDSABLEMK1\DVHELD_DEV;User ID=sa;Initial Catalog=UFC_Stats;Persist Security Info=True;Application Name=SSIS-UFC-{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa;">
+      DTS:ConnectionString="Data Source=ORANDSABLEMK1\DVHELD_DEV;User ID=sa;Initial Catalog=UFC_Stats;Persist Security Info=True;Encrypt=False;Application Name=SSIS-UFC-{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa;">
       <DTS:Password
         DTS:Name="Password"
-        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm7Yfy4LfbUWZzoRFb9tm9AAAAAACAAAAAAAQZgAAAAEAACAAAACLtVSWeKExPLlm7wp6/NL7pb1KsvNzpnuq6RR5iJhF+wAAAAAOgAAAAAIAACAAAABOeqdiyAvmt5c+bsBQHtko+DkGcNrAvokwAOvO8/GU74AAAAAqiJVwdt3BW9rxy3bWp6e/n/lj7jc0I5gL2Ha8wY/i8tQKM7xcm4Ej6c1364jpyo2BXh8p12igmwEHlnzhxIF/qghSJZUB55fhtfqkbS1cfLiInm1ZOzM63yPJ7X42R6aJwUCd1eiD3bFraKcmfub4BvyT+L3aQTw6DTsDP5mbE0AAAAAW2pYQ2QZyBRjDfVRRTIBvRhyYHUtxtZlKGdwOvDKhRd/2SfXtKedtMZ6zhKRQRuxw2YLbgscqRXrpQx1PQXFj</DTS:Password>
+        Sensitive="1"
+        p4:Salt="HfSDc7FmKLw="
+        p4:IV="pncQmQFmo3g0I8HuRLqfuA=="
+        p4:Algorithm="http://www.w3.org/2001/04/xmlenc#aes256-cbc" xmlns:p4="www.microsoft.com/SqlServer/SSIS">5HwmQRRNF4B7efPDBVZ4JY+LW0sBOthbe8yEu1sVTZkQIq/jOZZPy6RMR9Su2K93a/fkBsIov0CssNiAa+cZeXA3Yh/YRVDP4wiRJARgej4hca295hUcOL8zwGgIeHg3RoxjH/sNYrkI5E2qcrkNRkWkVr70E3xLlZo6VON9AfU=</DTS:Password>
     </DTS:ConnectionManager>
   </DTS:ObjectData>
 </DTS:ConnectionManager>

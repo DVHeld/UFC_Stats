@@ -5,7 +5,7 @@
   DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=ORANDSABLEMK1\DVHELD_DEV;User ID=sa;Initial Catalog=UFC_Stats;Persist Security Info=True;Application Name=SSIS-UFC-{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa;">
+      DTS:ConnectionString="Data Source=ORANDSABLEMK1\DVHELD_DEV;User ID=sa;Initial Catalog=UFC_Stats;Persist Security Info=True;Encrypt=False;Application Name=SSIS-UFC-{C98CD76B-AC30-44D6-ACC5-F1D3BFD72C2F}ORANDSABLEMK1\DVHELD_DEV.UFC_Stats.sa;">
       <DTS:Password
         DTS:Name="Password"
         Sensitive="1"></DTS:Password>

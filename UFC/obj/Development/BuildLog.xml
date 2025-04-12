@@ -2,14 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>UFC</Name>
-    <LastWriteTime>2025-03-22T14:40:48.4097412Z</LastWriteTime>
-    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    <LastWriteTime>2025-04-09T00:35:54.1704262Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+    <Salt>7Vg4lJUe</Salt>
+    <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm7Yfy4LfbUWZzoRFb9tm9AAAAAACAAAAAAAQZgAAAAEAACAAAACbb/Gh6kU15VHYbBXH46YGtIHR+9/3YhHgYR41FqURfQAAAAAOgAAAAAIAACAAAAD1MboWEcbHPm9a+HmBBmO2nVwHy9wsvZpPs6kEph3m3TAAAABkUhC/DM+mviSWaXX38Hs/cu9N0rxAVlzXiZBLXuocyhdX3OgqX81jPDi02BCyMv9AAAAA4jcZxZEtROtQhvd0R2AO2mO2e83Y0RZkq4so49uls1Rvxn6uTr/dT+kOTgopqvjltU+41pBs0T9mOO3QMjv2Dw==</LastKnownProtectedHashedPassword>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Package.dtsx</Name>
-      <LastWriteTime>2025-03-27T05:52:27.5497363Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+      <LastWriteTime>2025-04-09T00:35:53.4122076Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithPassword</LastKnownProtectionLevel>
+      <Salt>cc8jDh93</Salt>
+      <LastKnownProtectedHashedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAm7Yfy4LfbUWZzoRFb9tm9AAAAAACAAAAAAAQZgAAAAEAACAAAAAWcgL5UxCDH214yvZEh2FzyORVgepplrl4xw/2IPnjCQAAAAAOgAAAAAIAACAAAAB3DsaHdp1CSRgujCly8mJzlLH9UCOQqw2pKbdboEi6bDAAAABJJ8tYb49ybNYADm1GtpxRjksbhIxpUF0AsjU42RE7xysqGRkvNx5eym3eT85msZBAAAAAvmF15EjQIyQD1+66LKGC69DYf/tWndgpgHd6uH2/ChUHqQOjJdMZP6sd+txJBj37hw2i7kxQvC2Q5JRpMYbTgw==</LastKnownProtectedHashedPassword>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
 </BuildLog>
