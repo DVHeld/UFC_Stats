@@ -4,7 +4,7 @@ This is just a personal project. The goal here is just to learn and practice var
 
 ![Tale of the Tape](https://github.com/DVHeld/UFC_Stats/blob/main/img/Tale_of_the_Tape_01.png?raw=true)
 ![Tale of the Tape](https://github.com/DVHeld/UFC_Stats/blob/main/img/Tale_of_the_Tape_02.png?raw=true)
-![Tale of the Tape](https://github.com/DVHeld/UFC_Stats/blob/main/img/Tale_of_the_Tape_03.png?raw=true)
+![Fight Results](https://github.com/DVHeld/UFC_Stats/blob/main/img/Fight_Results_01.png?raw=true)
 
 The sources for the raw data are:
 
