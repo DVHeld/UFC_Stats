@@ -49,16 +49,24 @@ def process_flags() -> bool:
                             normalized_data = 'North Korea'
                         elif normalized_data == "Korea (the Democratic People's Republic of)":
                             normalized_data = 'South Korea'
+                        elif normalized_data == 'Syrian Arab Republic':
+                            normalized_data = 'Syria'
+                        elif normalized_data == 'Republic of North Macedonia':
+                            normalized_data = 'North Macedonia'
+                        elif normalized_data == 'Viet Nam':
+                            normalized_data = 'Vietnam'
+                        elif "Lao People's Democratic Republic" in normalized_data:
+                            normalized_data = 'Laos'
+                        elif 'Russian Federation' in normalized_data:
+                            normalized_data = 'Russia'
+                        elif 'United Kingdom' in normalized_data:
+                            normalized_data = 'United Kingdom'
+                        elif 'United States' in normalized_data:
+                            normalized_data = 'United States'
                         if ' (' in normalized_data:
                             normalized_data, _ = normalized_data.split(' (')
                         if ',' in normalized_data:
                             normalized_data, _ = normalized_data.split(',')
-                        if 'United Kingdom' in normalized_data:
-                            normalized_data = 'United Kingdom'
-                        elif 'United States' in normalized_data:
-                            normalized_data = 'United States'
                     record += normalized_data + ";"
                 output_file.write(record[:-1] + "\n")
     return True
-
-print(process_flags())
